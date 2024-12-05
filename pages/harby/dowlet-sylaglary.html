@@ -1,0 +1,1094 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../style.css">
+	<script src="../../js/jquery.min.js" type="application/javascript"></script>
+	<script src="../../js/slick.min.js" type="application/javascript"></script>
+	<script src="../../js/custom.js" type="application/javascript"></script>
+	<title>newnew</title>
+	<style>
+		.main-container {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.back-full-video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+
+		.new-container2 {
+			width: 30%;
+			position: relative;
+			box-sizing: border-box;
+			margin: 20px 40px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			z-index: 2;
+		}
+
+		.new-container3 {
+			width: 30%;
+			position: relative;
+			margin: 3% 40px 0;
+			box-sizing: border-box;
+			display: flex;
+			flex-wrap: wrap;
+			/* flex-direction: column; */
+			/* align-items: end; */
+			justify-content: space-between;
+			z-index: 2;
+		}
+
+		.new-container3 .military-new-slide2{
+			width: calc(45% - 10px);
+			height: 70px !important;
+		}
+
+		.military-new-slide2 {
+			width: calc(45% - 10px);
+			height: 80px;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+		}
+
+		.military-new-slide2 img {
+			width: 100%;
+			height: 100%;
+			display: block;
+			cursor: pointer;
+		}
+
+		.middle-slide2 {
+			width: 100%;
+			display: flex;
+			margin: auto;
+			/* justify-content: center; */
+			/* margin-right: -7px; */
+		}
+
+		.middle-slide2 img {
+			/* margin-top: -100px; */
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		/* Overlay styles */
+		#overlay {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 20%;
+			/* Увеличенная ширина контейнера */
+			height: 70%;
+			z-index: 9999;
+			display: none;
+			box-sizing: border-box;
+			padding: 20px;
+			/* background-color: rgba(0, 0, 0, 0.8); */
+			/* Черный фон */
+			border-radius: 10px;
+			text-align: center;
+			overflow: hidden;
+			/* Обрезаем содержимое, выходящее за границы */
+		}
+
+
+		#overlay-content::-webkit-scrollbar {
+			width: 6px;
+			border-radius: 3px;
+			background-color: rgba(98, 121, 98, 0.4);
+		}
+
+		#overlay-content::-webkit-scrollbar-thumb {
+			width: 2px;
+			border-radius: 3px;
+			background-color: rgb(0, 153, 0);
+		}
+
+		#overlay-image-container {
+			width: 100%;
+			max-height: 50%;
+			/* Ограничиваем высоту контейнера изображения */
+			text-align: center;
+			/* margin-bottom: 20px; */
+			margin: 0 auto 20px;
+			/* Отступ между изображением и текстом */
+		}
+
+		#overlay-image {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			max-height: 100%;
+			object-fit: contain;
+		}
+
+		#overlay-content {
+			font-size: 3vh;
+			height: 80%;
+			overflow-y: auto;
+			box-sizing: border-box;
+			padding: 10px;
+			color: #edf4ec;
+			text-align: left;
+			/* В зависимости от формата вашего содержимого */
+		}
+
+
+		.scrolling-text2 {
+			font-size: 5vh;
+			line-height: normal;
+			color: #edf4ec;
+			text-align: center;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+
+		.center-text {
+			text-align: center;
+			overflow-x: hidden;
+		}
+
+		.left-text {
+			text-align: right;
+		}
+
+		.medal-img {
+			width: 35%;
+			height: 35%;
+			object-fit: cover;
+		}
+
+		.medal3-img {
+			width: 70%;
+			height: 70%;
+			object-fit: cover;
+		}
+
+        .bac-arrow{
+            bottom: 9.5vh;
+            left: 61%;
+        }
+ 
+	</style>
+</head>
+
+<body class="military">
+
+	<div class="main-container">
+		<video autoplay loop muted playsinline class="back-full-video">
+			<source src="../../assets/video/guchleri-menu-info.mp4" type="video/mp4">
+		</video>
+		<div onclick="window.location.href='../turkmenistanyn-yaragly-guychler.html'" class="bac-arrow">
+			<img src="../../assets/image/back.png" alt="back">
+		</div>
+
+		<div class="new-container2">
+			<div class="military-new-slide2" >
+				<img src="../../assets/image/ds-edermenlik.png" alt="menu-item" data-content='
+    				<div class="center-text">
+    				    <h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+						<h3 class="center-text">Türkmenistanyň «Edermenlik» medalyny döretmek hakynda</h3>
+						<img class="medal-img" src="../../assets/image/eder-transformed.png" alt="example-image" >
+						<p class="center-text" style="margin-bottom: 20px">Türknenistanyň Mejlisi karar edýär:</p>
+						<p><span style="margin-right:10px">1.</span>Türkmenistanyň «Edermenlik» medalyny döretmeli.</p>
+						<p><span style="margin-right:10px">2.</span>«Edermenlik» medaly hakyndaky Düzgünnamany tassyklamaly.</p>
+						<p><span style="margin-right:10px">3.</span>«Edermenlik» medalynyň ýazgysyny tassyklamaly.</p>
+						<br>
+						<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+						<p class="left-text"><strong>S.NYÝAZOW.</strong></p>
+						<br>
+						<p class="center-text">Aşgabat şäheri, 1992-nji ýylyň 30-njy sentýabry.</p>
+						<br>
+						<br>
+						<h3 class="center-text"><strong>Türkmenistanyň «Edermenlik» medalynyň</strong></h3>
+						<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+						<br>
+						<p class="center-text">(rejelenen görnüşi)</p>
+						<p><span style="margin-right:10px">1.</span>Türkmenistanyň «Edermenlik» medaly Türkmenistanyň döwlet sylagydyr.</p>
+						<p><span style="margin-right:10px">2.</span>Türkmenistanyň «Edermenlik» medaly raýatlyk we gulluk borçlary berjaý edilende görkezilen şahsy edermenligi üçin sylaglamak maksady bilen döredildi.</p>
+						<p><span style="margin-right:10px">3.</span>Türkmenistanyň «Edermenlik» medaly bilen harby gullukçylar, içeri işler edaralarynyň işgärleri we beýleki raýatlar sylaglanylýar.</p>
+						<p>Türkmenistanyň «Edermenlik» medaly bilen Türkmenistanyň raýatlary däl adamlar hem sylaglanylýar.</p>
+						<p><span style="margin-right:10px">4.</span>Türkmenistanyň «Edermenlik» medaly bilen:
+						öz jany üçin hatarly şertlerde harby borjuny berjaý edeni üçin;
+						jenaýatçy toparlary ýok etmekde we jenaýat eden jenaýatçylary tutup saklany üçin;
+						adatdan daşary ýagdaýlarda adamlary halas etmekde, tebigy betbagtçylyklaryň zyýanly netijelerini ýok etmekde görkezen şahsy edermenligi üçin sylaglanylýar.
+						</p>
+						<p><span style="margin-right:10px">5.</span>Şu sylaga mynasyp bolan adamlara Türkmenistanyň «Edermenlik» medaly we şahadatnama gowşurylýar.</p>
+						<p><span style="margin-right:10px">6.</span>Türkmenistanyň «Edermenlik» medaly bilen sylaglanan raýatlara iň pes aýlyk zähmet hakynyň bäş essesi möçberinde
+						birwagtlaýyn baýrak hem-de iş hakyna, aýlyk wezipe hakyna, pensiýasyna, kömek puluna, talyp hakyna iň pes aýlyk zähmet
+						hakynyň 20 göterimi möçberinde her aýda goşmaça hak tölenilýär.
+						Türkmenistanyň «Edermenlik» medaly bilen sylaglanan adamlar Türkmenistanyň kanunçylygynda bellenilen halatlarda we
+						tertipde ýeňilliklerden peýdalanýarlar.
+						</p>
+						<br>
+						<br>
+						<h3 class="center-text"><strong>Türkmenistanyň «Edermenlik» medalynyň plankasynyň</strong></h3>
+						<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+						<br>
+						<p>Türkmenistanyň «Edermenlik» medalynyň plankasynyň düşegi ýaşyl reňkli ýüpek mata bolup, onuň merkezindäki gyzyl zolagyň içinden dikligine bäş sany sary çyzyk geçýär. Plankanyň daşky gyrasy sary reňk bilen örtülendir.</p>
+						<br>
+						<h3 class="center-text"><strong>Türkmenistanyň «Edermenlik» medalynyň</strong></h3>
+						<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+						<br>
+						<p class="center-text">(täze redaksiýasy)</p>
+						<br>
+						<p>    «Edermenlik» medalynyň altyn çaýylan merkezi tegeleginiň diametri 23,5 mm bolup, ortarada galkanyň we onuň arkasynda iki
+						sany gylyjyň güberçek şekili görkezilen. Merkezi tegelegiň daşyndaky diametri 32,5 mm, ini 4,5 mm bolan ýaşyl syrça
+						örtülen halkanyň ýokarky böleginde «EDERMENLIK» diýen ýazgy, aşaky böleginde zeýtun agajynyň iki tarapa ýaýrap gidýän
+						şahalary ýerleşdirilen. Tegelegiň daşynda, merkezlerine 3 sany sirkoniý daşjagazlar oturdylan altyn çaýylan sekiz sany
+						sütünjikler ýerleşdirilip, ol sütünleriň arasynda gyzyl reňkde syrçalanan altyn çaýylan 5 sany şöhlejikler
+						şekillendirilen.</p>
+						<p>    Medalyň umumy diametri 45 mm.</p>
+						<p>    Medal halkajyk arkaly altyn çaýylan, ini 31 mm bolan, beýikligi 20 mm bolan göniburçly kolodka birleşdirilýär.
+						Kolodkanyň içinde Türkmenistanyň Döwlet baýdagyny aňladýan syrçalanan şekil berilýär. Medal 925-nji mähekli kümüşden
+						ýasalyp, onuň ýüzüne altyn çaýylýar. </p><br><br>
+    				</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-garassyz.png" alt="menu-item" data-content='
+				<div class="center-text">
+					<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+					<h3 class="center-text">Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordenini döretmek hakynda</h3>
+					<br>
+					<img class="medal-img" src="../../assets/image/garassyz-medal.png" alt="example-image">
+					<br> <br>
+
+					<p>    1-nji madda. Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordenini döretmeli.</p>
+					<p>    2-nji madda. Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordeniniň Statutyny we Ýazgysyny täze redaksiýada tassyklamaly (goşulýar).</p>
+
+					<br>
+					<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+					<p class="left-text"><strong>Saparmyrat TÜRKMENBAŞY.</strong></p>
+					<br>
+					<p class="center-text">Aşgabat şäheri, 1999-njy ýylyň 1-nji marty.</p>
+					<br><br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin»  diýen ordeniniň </strong></h3>
+					<h3 class="center-text"><strong>STATUSY</strong></h3>
+					<br>
+					<p class="center-text">(rejelenen görnüşi)</p>
+					<br>
+					<p>    1. Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordeni Türkmenistanyň döwlet sylagydyr.</p>
+					<p>    2. Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordeni bilen Türkmenistanyň raýatlary we daşary ýurt döwletleriniň raýatlary sylaglanylýar.</p>
+					<p>    3. Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordeni ýurduň ykdysadyýetini ösdürmäge, önümçiligiň netijeliligini ýokarlandyrmaga, ylmy we tehnikany ösdürmäge, ýurduň goranmak ukybyny pugtalandyrmaga goşan uly goşandy üçin, medeniýetde, edebiýatda, sungatda, saglygy goraýyşda, döwlet we jemgyýetçilik işinde, kanunylygy we hukuk tertibini pugtalandyrmakda, ösüp gelýän nesli okatmakda we terbiýelemekde, Türkmenistan bilen beýleki döwletleriň we halkara guramalarynyň arasynda ykdysady we medeni gatnaşyklary ösdürmekde gazanan uly üstünlikleri üçin sylaglamak maksady bilen döredildi.</p>
+					<p>    4. Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordeni bilen sylaglanan adamlara iň pes aýlyk zähmet hakynyň on bäş essesi möçberde birwagtlaýyn baýrak hem-de iş hakyna, aýlyk wezipe hakyna, pensiýasyna, kömek puluna, talyp hakyna her aýda iň pes aýlyk zähmet hakynyň 15 göterimi möçberde goşmaça hak tölenilýär.</p>
+					<p>    Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordeni bilen sylaglanan adamlar Türkmenistanyň kanunçylygynda bellenilen halatlarda we tertipde ýeňilliklerden peýdalanýarlar.</p>
+					<p>    5. Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordeni bilen sylaglanylan adamlara Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordeni we şahadatnama gowşurylýar.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordeniniň plankasynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» ordeniniň plankasynyň düşegi uzynlygyna ak çyzykly ýaşyl reňkli ýüpek mata bolup, onuň merkezinde altyn reňkli sekizburçlugyň şekili ýerleşdirilen.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordeniniň </strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p class="center-text">(rejelenen görnüşde)</p>
+					<p>    Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordeni sekizburçly ýyldyz görnüşinde bolup, onuň gyralarynda ak reňkli sirkoniý daşlarynyň 56-sy hem-de burçlaryň içinde gyzyl reňkli sirkoniý daşlarynyň 8-si  bilen bezelen we her burçynda togalak düwme goýulan. Burçlaryň arasy ýaşyl reňkli ýapraklaryň ýedisi bilen gyralary jäheklenen. Ordeniň umumy diametri 44 mm.</p>
+					<p>    Ordeniň merkezinde, Günüň şöhleleri şekillendirilen altyn çaýylan, diametri 22 mm bolan tegelegiň merkezi böleginde Türkmenistanyň ýaşyl reňkli syrçalanan kartasy we Türkmenistanyň Garaşsyzlyk binasynyň altyn çaýylan güberçek şekili ýerleşdirilen.</p>
+					<p>    Ordeniň merkezi tegeleginiň daşyndan diametri 31 mm we ini 4 mm bolan ýaşyl reňkde syrçalanan tegelek halkanyň içiniň ýokarky böleginde «GARAŞSYZ TÜRKMENISTANA BOLAN BEÝIK SÖÝGÜSI ÜÇIN» diýen ýazgy, aşaky böleginde bolsa iki tarapa ýaýrap gidýän altyn çaýylan zeýtun şahalary şekillendirilen.</p>
+					<p>    Orden halkajyk arkaly beýikligi 20 mm we ini 31 mm bolan açyk kitap görnüşinde şekillendirilen kolodka birleşdirilýär. Kolodkanyň ortasynda gyzyl reňk bilen syrçalanan sütünde türkmen halysynyň gölleriniň bäşisi goýulan. Kolodka ýaşyl reňkli syrça bilen örtülen.</p>
+					<p>    Türkmenistanyň «Garaşsyz Türkmenistana bolan beýik söýgüsi üçin» diýen ordeni we onuň kolodkasy 925 mähekli kümüşden altyn çaýylyp ýasalýar.</p>
+				</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-iceri-isler.png" alt="menu-item" data-content='
+				<div class="center-text">
+					<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+					<h3 class="center-text">Türkmenistanyň «Içeri işler edaralarynyň weterany» medalyny döretmek hakynda</h3>
+					<br>						
+					<p>    Içeri işler edaralarynyň işgärleriniň köp ýyl birkemsiz gulluk edendigine mynasyp baha bermek maksady bilen:</p>
+					<p>    1-nji madda. Türkmenistanyň «Içeri işler edaralarynyň weterany» medalyny döretmeli.</p>
+					<p>    2-nji madda. Türkmenistanyň «Içeri işler edaralarynyň weterany» medalynyň Düzgünnamasyny we Ýazgysyny tassyklamaly (goşulýar).</p>
+					<br>
+					<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+					<p class="left-text"><strong>Gurbanguly BERDIMUHAMEDOW.</strong></p>
+					<br>
+					<p class="center-text">Aşgabat şäheri, 2008-nji ýylyň 20-nji oktýabry.</p>
+					<br><br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Içeri işler edaralarynyň weterany» medalynyň</strong></h3>
+					<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+					<br>
+					<p class="center-text">(rejelenen görnüşi)</p>
+					<br>
+					<p>1.    Türkmenistanyň «Içeri işler edaralarynyň weterany» medaly döwlet sylagy bolup, ol içeri işler edaralarynyň işgäriniň köp ýyl birkemsiz gulluk edendigini tapawutlandyrmak maksady bilen döredilýär.</p>
+					<p>2.    Türkmenistanyň «Içeri işler edaralarynyň weterany» medaly bilen Türkmenistanyň Içeri işler edaralarynda we birliklerinde birkemsiz 25 ýyl we ondan-da köp gulluk eden erkek adamlar, birkemsiz 20 ýyl we ondan-da köp gulluk eden aýallar, Türkmenistanyň (öňki SSSR-iň) ordenleri we medallary bilen sylaglanan, hormatly atlara mynasyp bolan, Türkmenistanyň (öňki SSSR-iň) kanungylygynda göz öňünde tutulan pudaklaýyn tapawutlandyryş nyşanlary bilen sylaglanan, şol sanda ätiýaçlyga göýberilen, gulluk borçlaryny ýerine ýetirmek bilen baglanyşykly ýaralanmagyň, seňselemegiň, şikes almagyň ýa-da kesellemegiň netijesinde maýyp bolan içeri işler edaralarynyň hatarçy, seržant we ofiser işgärleri sylaglanylýar.</p>
+					<p>3.    Türkmenistanyň «Içeri işler edaralarynyň weterany» medaly bilen sylaglamaklyk Türkmenistanyň Içeri isler ministriniň teklipnamasy esasynda Türkmenistanyň Prezidenti tarapyndan amala aşyrylýar.</p>
+					<p>4.    Türkmenistanyň «Içeri işler edaralarynyň weterany» medaly bilen sylaglamak üçin towakganamalara seretmegiň tertibini Türkmenistanyň Içeri işler ministri kesgitleýär.</p>
+					<p>5.    Sylaga mynasyp bolan şahslara Türkmenistanyň «Içeri işler edaralarynyň weterany» medaly we onuň şahadatnamasy gowşurylýar.</p>
+					<p>6.    Türkmenistanyň «Içeri işler edaralarynyň weterany» medaly bilen sylaglanan şahslara Türkmenistanyň Döwlet býujetiniň serişdeleriniň hasabyna ortaça aýlyk iş hakynyň bäş essesi möçberinde birwagtlaýyn pul baýragy tölenilýär we kanunçylykda görkezilen beýleki ýeňilliklerden peýdalanýarlar.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Içeri işler edaralarynyň weterany» medalynyň plankasynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>Türkmenistanyň «Içeri işler edaralarynyň weterany» medalynyň plankasynyň düşegi ýaşyl reňkli ýüpek mata bolup, onuň iki gapdalyndan dikligine iki sany sary reňkli çyzyk gelýär.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Içeri işier edaralarynyň weterany» medalynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>    Türkmenistanyň «Içeri işler edaralarynyň weterany» medaly 16 burçly ýyldyz görnüşinde bolup, biri-birine galtaşýan iki sany sekizburçlukdan ybaratdyr. Medalyň esasy sekizburçlugynyň daşky kütek burçlary bilen beýleki sekizburçlugyň galtaşýan ýerindäki romb görnüşindäki şekili ýaşyl reňkli syrça bilen örtülendir.</p>
+					<p>    Medalyň umumy diametri 40 mm. Medal 925 mähekli kümüşden ýasalyp, onuň ýüzüne altyn çaýylýar.</p>
+					<p>    Medalyň merkezi böleginde diametri 14 mm deň bolan, tegelek galkanyň merkezinde Türkmenistanyň Döwlet Tugrasynyň reňkli güberçek şekili şekillendirilendir. Galkanyň daşyna örülen görnüşde halka aýlanan. Galkanyň şekiliniň daşynda güberçek görnüşde atanaklaýyn ýerleşdirilen 2 sany gylyjyň –uzynlygy 3 mm uç tarapynyň hem-de uzynlygy 5 mm 2 sany eltutarynyň şekili ýerleşdirilen.</p>
+					<p>    Medalyň merkezindäki galkanyň daşy halka görnüşli bezelen ini 4,8 mm deň bolan ýaşyl syrça bilen örtülen 2 sany zolagyň ýokarky böleginde döwlet dilinde beýikligi 3,0 mm deň bolan «IÇERI IŞLER», aşaky böleginde «EDARALARYNYŇ WETERANY» diýen sözler ýazylandyr.</p>
+					<p>    Medal halkajyk arkaly, ini 25 mm, beýikligi 15 mm iki gapdaly kertikli, içki ini 20 mm, beýikligi 13 mm deň ýaşyl reňkli syrça bilen örtülen gönüburçluk görnüşli kolodka birleşdirilýär. Ýaşyl reňkli syrça örtülen kolodkada döwlet dilinde güberçeklenip altyn çaýylan «TÜRKMENISTAN» diýen ýazgy ýerleşdirilendir.</p>
+					<p>    Medaly geýime dakmak üçin kolodkanyň arka tarapynda ildirgiji bar.</p>
+					<br><br>
+				</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-harby-medal.png" alt="menu-item" data-content='
+				<div class="center-text">
+					<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+					<h3 class="center-text">«Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen Türkmenistanyň ýadygärlik medalyny döretmek hakynda</h3>
+					<br>
+					<img class="medal-img" src="../../assets/image/turk-gar.png" alt="example-image">
+					<br> <br>
+					<p>Türkmenistanyň Ýaragly Güýçleriniň harby gullukçylarynyň Türkmenistanyň döwlet Garaşsyzlygyny berkitmekde we gorap saklamakda, Watanymyzyň goranmak kuwwatyny pugtalandyrmakda, şeýle hem Watan goragçylaryny mertlik we watansöýüjilik ruhunda terbiýelemekde bitiren hyzmatlaryny, şeýle hem Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe işjeň gatnaşan we ýörişiň ýokary derejede guramaçylykly geçirilmegine goşan şahsy goşantlaryny göz öňünde tutup, olary sylaglamak maksady bilen:</p>
+					<p>1-nji madda. «Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen Türkmenistanyň ýadygärlik medalyny döretmeli.</p>
+					<p>2-nji madda. «Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen Türkmenistanyň ýadygärlik medaly hakyndaky Düzgünnamany tassyklamaly (goşulýar).</p>
+					<p>3-nji madda. «Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen Türkmenistanyň ýadygärlik medalynyň we plankasynyň ýazgylaryny tassyklamaly (goşulýar).</p>
+					<br>
+					<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+					<p class="left-text"><strong>Gurbanguly Berdimuhamedow.</strong></p>
+					<br>
+					<p class="center-text">Aşgabat şäheri. 2009-njy ýylyň 2-nji oktýabry.</p>
+					<br><br>
+					<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen Türkmenistanyň ýadygärlik medalynyň</strong></h3>
+					<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+					<br>
+					<p>1. «Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly Türkmenistanyň Garaşsyzlygyny, çäk bütewiligini, konstitusion gurluşyny goramakda, Watanymyzyň goranmak kuwwatyny berkitmekde we howpsuzlygyny üpjün etmekde tapawutlanan, şeýle hem Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe işjeň gatnaşan we ýörişiň ýokary derejede guramaçylykly geçirilmegine şahsy goşantlaryny goşan harby gullukçylary sylaglamak maksady bilen döredildi.</p>
+					<p>2. «Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly bilen Türkmenistanyň Ýaragly Güýçleriniň harby gullukçylarynyň Türkmenistanyň döwlet Garaşsyzlygyny berkitmekde we gorap saklamakda, Watanymyzyň goranmak kuwwatyny pugtalandyrmakda, şeýle hem Watan goragçylaryny mertlik we watansöýüjilik ruhunda terbiýelemekde bitiren hyzmatlaryny, şeýle hem Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşan we dabaraly harby ýörişi ýokary derejede guramaçylykly geçirmäge goşant goşan Türkmenistanyň Ýaragly Güýçleriniň, Türkmenistanyň Döwlet serhet gullugynyň, Türkmenistanyň Içeri işler ministrliginiň, Türkmenistanyň Milli howpsuzlyk ministrliginiň, şeýle hem beýleki hukuk goraýjy edaralarynyň harby gullukçylary we işgärleri sylaglanylýar.</p>
+					<p>3. «Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly bilen Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşan we dabaraly harby ýörişi ýokary derejede guramaçylykly geçirmäge goşant goşan we işjeň gatnaşan hem-de:</p>
+					<p>– Türkmenistanyň Garaşsyzlygyny pugtalandyrmaga, döwletimiziň goranmak kuwwatyny ýokarlandyrmaga, Watanymyzyň hem-de onuň raýatlarynyň howpsuzlygyny we asudalygyny üpjün etmäge goşan şahsy goşantlary üçin;</p>
+					<p>– Milli Ýaragly Güýçlerimiziň ýokary derejedäki söweşjeň taýýarlygyny üpjün etmekdäki, esgerleri çuňňur watançylyk ruhunda terbiýelemekdäki, goşunda berk düzgün-tertibi ýola goýmakdaky we doganlyk-dostlugy ösdürmekdäki bitiren hyzmatlary üçin sylaglanylýar.</p>
+					<p>4. «Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly diýen sylaglananlara medal we onuň şahadatnamasy gowşurylýar.</p>
+					<p>5. «Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly bilen sylaglananlar kanunçylykda bellenen tertipde ýeňilliklerden peýdalanýarlar.</p>
+					<br>
+					<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen Türkmenistanyň ýadygärlik medalynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<p>«Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly sekizburçluk, gyrasy inçe gyzyl çaýylan güberçek görnüşinde bolup, merkezi bölegi ýaşyl reňkli emal bilen syrçalanandyr.</p>
+					<p>Medalyň diametri 35 mm bolan ýaşyl reňkli emal bilen syrçalanan, merkezi böleginiň içinde sekiz sany uzynlygy 5 mm we on alty sany uzynlygy 3 mm güberçek görnüşindäki ýüzüne gyzyl çaýylan burçlar ýerleşdirilen.</p>
+					<p>Medalyň umumy diametri 40 mm.</p>
+					<p>Medalyň merkezi böleginde diametri 25 mm bolan gyzyl çaýylan, inine 5 mm ölçegdäki güberçek görnüşli tegelegiň içinde 33 sany güberçek düwmejikler ýerleşdirilendir. Medalyň merkezi bölegindäki tegelegiň içi ýaşyl reňkli syrça bilen örtülip, içinde gyzyl çaýylan güberçek görnüşindäki «Garaşsyz Türkmenistana 18 ýyl» diýen ýazgy, Garaşsyzlyk binasy hem-de zeýtun şahalarynyň biri şekillendirilendir.</p>
+					<p>Medal mis bilen nikeliň garyndysyndan ýasalýar. Medal halkajyk arkaly ini 22 mm we beýikligi 18 mm iki bölekden ybarat bolan, birinji bölegi dört burçly, beýikligine 7 mm gyzyl reňkli syrça bilen örtülen esasy meýdanynda Türkmen halysynyň 5 sany gölli hem-de ikinji bölegi üc burçly, beýikligine 11 mm ýaşyl reňkli syrça bilen örtülen esasy meýdanynda güberçek görnüşindäki bäş ýyldyzly ýarym aý şekillendirilen.</p>
+					<p>Kolodkanyň arka tarapynda ony geýime dakmak üçin ildirgiç bar.</p>
+					<p>Medalyň arka tarapy gyzyl çaýylan, «Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja ýadygärlik medaly» diýen ýazgy we bäş ýyldyzly ýarym aý güberçek görnüşinde şekillendirilen.</p>
+					<br>
+					<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen Türkmenistanyň ýadygärlik medalynyň plankasynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>«Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen Türkmenistanyň ýadygärlik medalynyň plankasynyň düşegi gyzyl reňkli ýüpek mata bolup, onda bäş sany haly gölleriniň şekili ýerleşdirilen. Plankanyň çep tarapynda dikligine ýaşyl reňkli zolak geçýär, ýaşyl zolakda ak reňkli ýarymaý we bäş sany kiçi bäşburçly ýyldyz şekillendirilen.</p>
+					<p>Plankanyň daşky gyrasy sary we goňur reňk bilen örtülen.</p>
+				</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-watan-soygusi.png" alt="menu-item" data-content='
+				<div class="center-text">
+					<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+					<h3 class="center-text">Türkmenistanyň «Watana bolan söýgüsi üçin» medalyny döretmek hakynda</h3>
+					<br>
+					<img class="medal-img" src="../../assets/image/watan-medal.png" alt="example-image">
+					<br> <br>
+					<p class="center-text">Türkmenistanyň Mejlisi karar edýär:</p>
+					<p>    1-nji madda. Türkmenistanyň «Watana bolan söýgüsi üçin» medalyny döretmeli.</p>
+					<p>    2-nji madda. Türkmenistanyň «Watana bolan söýgüsi üçin» medalynyň Düzgünnamasyny täze redaksiýada tassyklamaly (goşulýar).</p>
+					<p>    3-nji madda. Türkmenistanyň «Watana bolan söýgüsi üçin» medalynyň Ýazgysyny täze redaksiýada tassyklamaly (goşulýar).</p>
+					<br>
+					<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+					<p class="left-text"><strong>Saparmyrat TÜRKMENBAŞY.</strong></p>
+					<br>
+					<p class="center-text">Aşgabat şäheri, 1996-njy ýylyň 18-nji iýuny.</p>
+					<br><br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Watana bolan söýgüsi üçin» medalynyň</strong></h3>
+					<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+					<br>
+					<p class="center-text">(rejelenen görnüşi)</p>
+					<p>    1. Türkmenistanyň «Watana bolan söýgüsi üçin» medaly Türkmenistanyň döwlet sylagydyr.</p>
+					<p>    2. Türkmenistanyň «Watana bolan söýgüsi üçin» medaly Türkmenistanyň garaşsyzlygyny we özygtyýarlylygyny pugtalandyrmak boýunça döwletiň we jemgyýetiň öňünde bitirilen uly hyzmatlary üçin sylaglamak maksady bilen döredildi.</p>
+					<p>    3. Türkmenistanyň «Watana bolan söýgüsi üçin» medaly bilen Türkmenistanyň raýatlary sylaglanylýar.</p>
+					<p>    Türkmenistanyň «Watana bolan söýgüsi üçin» medaly bilen Türkmenistanyň raýaty däl adamlar hem sylaglanylyp bilner.</p>
+					<p>    4. Türkmenistanyň «Watana bolan söýgüsi üçin» medaly bilen:</p>
+					<p>    garaşsyz we özygtyýarly döwlet hökmünde Türkmenistany berkarar etmek boýunça göreldeli hem önjeýli döwlet we jemgyýetçilik işi hem-de onuň abraýyny pugtalandyrmaga goşan uly şahsy goşandy üçin;</p>
+					<p>    Türkmenistanyň ykdysady kuwwatyny pugtalandyrmakda, ykdysadyýetiň, ylmyň, medeniýetiň, sungatyň, bilimiň we saglygy goraýşyň ähli pudaklaryny ösdürmek boýunça döwlet maksatnamalaryny durmuşa geçirmekde uly zähmet üstünlikleri we hyzmatlary üçin;</p>
+					<p>    ýurduň goranmak ukybyny pugtalandyrmaga, howpsuzlygy, hukuk tertibini we kanunçylygy üpjün etmäge goşan uly şahsy goşandy üçin;</p>
+					<p>    ýaşlary Watana söýgi, hormat goýmak we wepalylyk ruhunda terbiýelemek boýunça ýokary hyzmatlary üçin sylaglanylýar.</p>
+					<p>    5. Türkmenistanyň «Watana bolan söýgüsi üçin» medaly bilen sylaglanylan adamlara Türkmenistanyň «Watana bolan söýgüsi üçin» medaly we şahadatnama gowşurylýar.</p>
+					<p>    6. Türkmenistanyň «Watana bolan söýgüsi üçin» medaly bilen sylaglanan raýatlara iň pes aýlyk zähmet hakynyň üç essesi möcberde birwagtlaýyn baýrak berilýär.</p>
+					<p>    Türkmenistanyň «Watana bolan söýgüsi üçin» medaly bilen sylaglanan adamlar kanunçylykda bellenilen halatlarda we tertipde ýeňilliklerden peýdalanýarlar.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Watana bolan söýgüsi üçin» medalynyň plankasynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>    Türkmenistanyň «Watana bolan söýgüsi üçin» medalynyň plankasynyň düşegi ýaşyl reňkli ýüpek mata bolup, çep gyrasyndan dikligine bäş sany haly gölli we iki tarapa ýaýrap duran zeýtun şahaly gyzyl zolak ýerleşdirilen. Plankanyň daşky gyrasy sary reňk bilen örtülendir.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Watana bolan söýgüsi üçin» medalynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p class="center-text">(rejelenen görnüşi)</p>
+					<br>
+					<p>    Türkmenistanyň «Watana bolan söýgüsi üçin» medaly ýaşyl reňkli syrça bilen örtülen diametri 42 mm bolan tegelek bolup, onuň içinde sekizburçluk ýerleşdirilen. Sekizburçlugyň altyn çaýylan her burçunda Gün şöhleleri görnüşinde çyzyklary bar we ortasynda ýaşyl sirkoniý daşy goýlan. Sekizburçlugyň burçlarynyň arasynda türkmen milli nagyşlary çekilen.</p>
+					<p>    Sekizburçlukda diametri 30 mm we 22 mm bolan iki tegelek ýerleşdirilen. Daşky tegelek halka ak reňkli syrça bilen örtülip, onuň ýokarky böleginde «WATANA BOLAN SÖÝGÜSI ÜÇIN» diýen altyn çaýylan ýazgy, aşaky böleginde bolsa türkmen halysynyň bäş sany altyn çaýylan gölleri goýlan. </p>
+					<p>    Ýerligi ak reňkli syrçalanan içki tegelegiň ortasynda Ýer şarynyň şekilinde Türkmenistanyň ýaşyl reňkli syrçalanan kartasy, onuň aşagynda bolsa iki tarapa ýaýrap gidýän altyn çaýylan zeýtun şahalary ýerleşdirilen.</p>
+					<p>    Medal altyn çaýylan halkajyk arkaly beýikligi 20 mm, ini 31 mm bolan gönüburçly kolodka birleşdirilýär. Kolodka Türkmenistanyň Döwlet baýdagyny aňladýan syrçalanan şekil görnüşinde ýerine ýetirilen.</p>
+					<p>    Türkmenistanyň «Watana bolan söýgüsi üçin» medaly altyn çaýylan 925 mähekli kümüşden ýasalýar.</p>
+					<br><br>
+				</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-birkemsiz-medal.png" alt="menu-item" data-content='
+				<div class="center-text">
+					<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+					<h3 class="center-text">Türkmenistanyň «Watana bolan söýgüsi üçin» medalyny döretmek hakynda</h3>
+					<br>
+					<img class="medal3-img" src="../../assets/image/watan-onu.png" alt="example-image">
+					<br> <br>
+					
+					<p>    Watanyň Berkararlygyny goramakda we berkitmekde köp ýyl wepaly gulluk eden harby gullukçylaryň hyzmatlaryna mynasyp baha bermek maksady bilen:</p>
+					<p>    1-nji madda. Türkmenistanyň «Watan öňündäki birkemsiz harby gullugy üçin» medalyny döretmeli.</p>
+					<p>    2-nji madda. Türkmenistanyň «Watan öňündäki birkemsiz harby gullugy üçin» medalynyň Düzgünnamasyny we Ýazgysyny tassyklamaly (goşulýar).</p>
+					
+					<br>
+					<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+					<p class="left-text"><strong>Gurbanguly Berdimuhamedow.</strong></p>
+					<br>
+					<p class="center-text">Aşgabat şäheri, 2008-nji ýylyň 20-nji oktýabry.</p>
+					<br><br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Watan önündäki birkemsiz harby gullugy üçin» medalynyň</strong></h3>
+					<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+					<br>
+					<p class="center-text">(rejelenen görnüşi)</p>
+					<br>
+					<p>    1. Türkmenistanyň «Watan öňündäki birkemsiz harby gullugy üçin» medaly döwlet sylagy bolup, medal bilen Türkmenistanyň Ýaragly Güýçleriniň, Türkmenistanyň Milli howpsuzlyk ministrliginiň, Türkmenistanyň Döwlet serhet gullugynyň hatarynda, şeýle hem Türkmenistanyň kanunlarynda harby gulluk göz öňünde tutulan ministrliklerinde we pudaklaýyn dolandyryş edaralarynda gulluk edýän, sylaga hödürlenýän wagtda hiç-hili temmisi bolmadyk we azyndan 10 ýyl gulluk eden harby gullukçylar sylaglanýar.</p>
+					<p>    2. Türkmenistanyň «Watan öňündäki birkemsiz harby gullugy üçin» medaly bilen sylaglamaklyk Türkmenistanyň Goranmak ministriniň, Türkmenistanyň Milli howpsuzlyk ministriniň, Türkmenistanyň Döwlet serhet gullugynyň başlygynyň we Türkmenistanyň kanunlarynda harby gulluk göz öňünde tutulan ministrlikleriniň we pudaklaýyn dolandyryş edaralarynyň ýolbaşçylarynyň towakganamasy esasynda Türkmenistanyň Prezidenti tarapyndan amala aşyrylýar.</p>
+					<p>    Medal üç derejeden ybaratdyr:</p>
+					<p>    – I dereje – birkemsiz 20 ýyl gulluk edendigi üçin;</p>
+					<p>    – II dereje – birkemsiz 15 ýyl gulluk edendigi üçin;</p>
+					<p>    – III dereje – birkemsiz 10 ýyl gulluk edendigi üçin.</p>
+					<p>    Türkmenistanyň «Watan öňündäki birkemsiz harby gullugy üçin» medalynyň I derejesi onuň iň ýokary derejelisidir. Medal bilen şeýle yzygiderlilikde, ýagny ilki III, soňra II we iň soňunda I derejesi bilen sylaglanylýar.</p>
+					<p>    Medalyň döredilen pursadyna çenli 10, 15 ýa-da 20 ýyl gulluk eden şahslar, medalyň birbada degişlilikde III, II we I derejeleri bilen sylaglanylyp bilner.</p>
+					<p>    Türkmenistanyň «Birkemsiz gullugy üçin» medalynyň III ýa-da II derejesi bilen sylaglanylan Türkmenistanyň içeri işler edaralarynyň işgäri, gulluk eden ýyllaryna laýyklykda, Türkmenistanyň Ýaragly Güýçlerine, beýleki goşunlaryna we harby edaralaryna harby gulluga geçende «Watan öňündäki birkemsiz harby gullugy üçin» medalynyň degişlilikde II ýa-da I derejesi bilen sylaglanylyp bilner.</p>
+					<p>    3. Türkmenistanyň «Watan öňündäki birkemsiz harby gullugy üçin» medaly bilen sylaglanylan adamlara Türkmenistanyň «Watan öňündäki birkemsiz harby gullugy üçin» medaly we şahadatnamasy gowşurylýar. Şol şahadatnama soňra ýokary derejedäki medallar bilen sylaglanmalar barada degişli bellikler edilýär.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Watan öňündäki birkemsiz harby gullugy üçin» medalynyň plankasynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>Türkmenistanyň «Watan öňündäki birkemsiz harby gullugy üçin» I, II, III derejeli medallarynyň plankasynyň düşegi ýaşyl reňkli ýüpek mata bolup, plankanyň daşky gyrasy goňrumtyl sary reňk bilen örtülendir. Plankanyň merkezinde I derejeli medal üçin dikligine bir sany sary çyzyk, II derejeli medal üçin dikligine iki sany sary çyzyk, III derejeli medal üçin dikligine üç sany sary çyzyk geçýär.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistänyň «Watan öňündäki birkemsiz harby gullugy üçin» medalynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>    Türkmenistanyň «Watan öňündäki birkemsiz harby gullugy üçin» medaly sekizburçluk şekilindedir.</p>
+					<p>    Medalyň umumy diametri 40 mm.</p>
+					<p>    Medalyň merkezi böleginde diametri 22 mm deň güberçek görnüşinde tegelek galkanyň ýaşyl reňkli syrça bilen örtülen şekili ýerleşdirilendir, içinde döwlet dilinde «WATAN ÖŇÜNDÄKI BIRKEMSIZ HARBY GULLUGY ÜÇIN» diýen sözler güberçek görnüşinde ýerleşdirilip, ol ýazgynyň daşy halkalaýyn 24 sany düwme bilen bezelendir. Galkanyň daşyna örülen görnüşde halka aýlanan. Medalyň merkezi bölegindäki tegelek galkanyň şekiliniň daşynda güberçek görnüşinde atanaklaýyn ýerleşdirilen 2 sany gylyjyň – uzynlygy 4 mm uç tarapynyň hem-de uzynlygy 6 mm 2 sany eltutarynyň şekili ýerleşdirilen. Medalyň merkezi böleginde ýerleşýän galkanyň şekilinden ähli tarapa ýaýraýan Günüň şöhlesini şekillendirýän çyzyklar gidýär.</p>
+					<p>    Türkmenistanyň I derejeli «Watan öňündäki birkemsiz harby gullugy üçin» medalynyň esasy 925 mähekli kümüşden ýasalyp, onuň ýüzüne altyn çaýylýar.</p>
+					<p>    Medal halkajyk arkaly, ini 25 mm, beýikligi 15 mm iki gapdaly kertikli, içki ini 20 mm, beýikligi 13 mm deň ýaşyl reňkli syrça bilen örtülen gönüburçluk görnüşli, mer­kezinde dikligine ini 2 mm deň bolan sary reňkli syrça bilen örtülen 1 sany zolakly kolodka birleşdirilýär.</p>
+					<p>    Medalyň arka tarapynda ýokarda I dereje belgisi we onuň aşagynda «Birkemsiz 20 ýyl gulluk edendigi üçin» diýen ýazgy we zeýtun şahalarynyň iki tarapa ýaýrap gidýän pudaklary ýerleşdirilendir.</p>
+					<p>    Medaly geýime dakmak üçin kolodkanyň arka tarapynda ildirgiji bar.</p>
+					<p>    Türkmenistanyň II derejeli «Watan öňündäki birkemsiz harby gullugy üçin» medaly mis bilen sinkiň garyndysyndan ýasalyp, onuň ýüzüne nikel çaýylýar.</p>
+					<p>    Medal halkajyk arkaly, ini 25 mm, beýikligi 15 mm iki gapdaly kertikli, içki ini 20 mm, beýikligi 13 mm deň ýaşyl reňkli syrça bilen örtülen gönüburçluk görnüşli, merkezinde dikligine her biriniň ini 2 mm deň bolan sary reňkli syrça bilen örtülen 1 sany zolakly kolodka birleşdirilýär.</p>
+					<p>    Medalyň arka tarapynda ýokarda II dereje belgisi we onuň aşagynda «Birkemsiz 15 ýyl gulluk edendigi üçin» diýen ýazgy we zeýtun şahasynyň iki tarapa ýaýrap gidýän pudaklary ýerleşdirilendir.</p>
+					<p>    Medaly geýime dakmak üçin kolodkanyň arka tarapynda ildirgiji bar.</p>
+					<p>    Türkmenistanyň III derejeli «Watan öňündäki birkemsiz harby gullugy üçin» medaly mis bilen sinkiň garyndysyndan ýasalyp, onuň ýüzüne misiň oksidirlenen  ergini çaýylýar.</p>
+					<p>    Medal halkajyk arkaly, ini 25 mm, beýikligi 15 mm iki gapdaly kertikli, içki ini 20 mm, beýikligi 13 mm deň ýaşyl reňkli syrça bilen örtülen gönüburçluk görnüşli, merkezinde dikligine her biriniň ini 2 mm deň bolan sary reňkli syrça bilen örtülen 3 sany zolakly kolodka birleşdirilýär.</p>
+					<p>    Medalyň arka tarapynda ýokarda III dereje belgisi we onuň aşagynda «Birkemsiz 10 ýyl gulluk edendigi üçin» diýen ýazgy we zeýtun şahasynyň iki tarapa ýaýrap gidýän pudaklary ýerleşdirilendir.</p>
+					<p>    Medaly geýime dakmak üçin kolodkanyň arka tarapynda ildirgiji bar.</p>
+				</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-weteran-medal.png" alt="menu-item" data-content='
+				<div class="center-text">
+					<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+					<h3 class="center-text">Türkmenistanyň «Harby gullugyň weterany» medalyny döretmek hakynda</h3>
+					<br>
+					<img class="medal-img" src="../../assets/image/harby-medal.png" alt="example-image">
+					<br> <br>
+					<p>    Harby gullukçylaryň köp ýyl birkemsiz gulluk edendigine mynasyp baha bermek maksady bilen:</p>
+					<p>    1-nji madda. Türkmenistanyň «Harby gullugyň weterany» medalyny döretmeli.</p>
+					<p>    2-nji madda. Türkmenistanyň «Harby gullugyň weterany» medalynyň Düzgünnamasyny we Ýazgysyny tassyklamaly (goşulýar).</p>
+					<br>
+					<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+					<p class="left-text"><strong>Gurbanguly BERDIMUHAMEDOW.</strong></p>
+					<br>
+					<p class="center-text">Aşgabat şäheri, 2008-nji ýylyň 20-nji oktýabry.</p>
+					<br><br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Harby gullugyň weterany» medalynyň</strong></h3>
+					<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+					<br>
+					<p class="center-text">(rejelenen görnüşi)</p>
+					<br>
+					<p>    1. Türkmenistanyň «Harby gullugyň weterany» medaly döwlet sylagy bolup, ol harby gullukçynyň köp ýyl birkemsiz gulluk edendigini tapawutlandyrmak maksady bilen döredilýär.</p>
+					<p>    2. Türkmenistanyň «Harby gullugyň weterany» medaly bilen Türkmenistanyň Ýaragly Güýçleriniň, Türkmenistanyň Milli howpsuzlyk ministrliginiň, Türkmenistanyň Döwlet serhet gullugynyň hatarynda, şeýle hem Türkmenistanyň kanunçylygy boýunça harby gulluk göz öňünde tutulan ministrliklerde we pudaklaýyn dolandyryş edaralarynda birkemsiz 25 ýyl we ondan-da köp gulluk edip ýören ýa-da ätiýaçlyga göýberilen erkek adamlar, birkemsiz 20 ýyl we ondan-da köp gulluk edip ýören ýa-da ätiýaçlyga goýberilen aýallar – harby gullukçylar, harby gulluk borçlaryny ýerine ýetirmekleri bilen baglanyşykly ýaralanmagyň, senselemegiň, şikes almagyň ýa-da kesellemegiň netijesinde maýyp bolan harby gullukçylar sylaglanmaga degişlidir.</p>
+					<p>    3. Türkmenistanyň «Harby gullugyň weterany» medaly bilen sylaglamak Türkmenistanyň Goranmak ministriniň, Türkmenistanyň Milli howpsuzlyk ministriniň, Türkmenistanyň Döwlet serhet gullugynyň başlygynyň we Türkmenistanyň kanunçylygy boýunça harby gulluk göz öňünde tutulan ministrlikleriň we pudaklaýyn dolandyryş edaralarynyň ýolbaşçylarynyň teklipnamasy esasynda Türkmenistanyň Prezidenti tarapyndan amala aşyrylýar.</p>
+					<p>    4. Türkmenistanyň «Harby gullugyň weterany» medaly bilen sylaglamak üçin towakganamalara seretmegiň tertibini Türkmenistanyň Goranmak ministri, Türkmenistanyň Milli howpsuzlyk ministri, Türkmenistanyň Döwlet serhet gullugynyň başlygy we Türkmenistanyň kanunçylygy boýunça harby gulluk göz öňünde tutulan ministrlikleriň we pudaklaýyn dolandyryş edaralarynyň ýolbaçylary kesgitleýärler.</p>
+					<p>    5. Sylaga mynasyp bolan şahslara «Harby gullugyň weterany» medaly we şahadatnama gowşurylýar.</p>
+					<p>    6. Türkmenistanyň «Harby gullugyň weterany» medaly bilen sylaglanan şahslara Türkmenistanyň Döwlet býujetiniň serişdeleriniň hasabyna ortaça aýlyk iş hakynyň bäş essesi möçberinde birwagtlaýyn pul baýragy tölenilýär we kanunçylykda bellenilen beýleki ýeňilliklerden peýdalanýarlar.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Harby gullugyň weterany» medalynyň plankasynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>Türkmenistanyň «Harby gullugyň weterany» medalynyň plankasynyň düşegi ýaşyl reňkli ýüpek mata bolup, her gapdalyndan dikligine iki sany açyk sary reňkli çyzyk geçýär. Plankanyň daşky gyrasy goňrumtyl sary reňk bilen örtülendir.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Harby gullugyň weterany» medalynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>    Türkmenistanyň «Harby gullugyň weterany» medaly sekizburçluk şekilindedir.</p>
+					<p>    Medalyň umumy diametri 40 mm.</p>
+					<p>    Medal 925 mähekli kümüşden ýasalyp, onuň ýüzüne altyn çaýylýar. Medalyň merkezi böleginde diametri 22 mm deň altyn çaýylan, güberçek görnüşinde tegelek galkanyň merkezinde Türkmenistanyň Döwlet Tugrasynyň diametri 12 mm deň bolan reňkli görnüşdäki güberçek şekili şekillendirilendir. Türkmenistanyň Döwlet Tugrasynyň şekiliniň daşyndan aýlaw boýunça döwlet dilinde «HARBY GULLUGYŇ WETERANY» diýen sözler güberçek görnüşinde ýerleşdirilip, ol ýazgynyň daşy halkalaýyn 24 sany düwme bilen bezelendir. Galkanyň daşyna örülen görnüşde halka aýlanan. Medalyň merkezi bölegindäki tegelek galkanyň şekiliniň daşynda güberçek görnüşinde atanaklaýyn ýerleşdirilen 2 sany gylyjyň - uzynlygy 4 mm uç tarapynyň hem-de uzynlygy 6 mm 2 sany eltutarynyň şekili ýerleşdirilen. Medalyň merkezi böleginde ýerleşýän galkanyň şekilinden ähli tarapa ýaýraýan günüň şöhlesini şekillendirýän çyzyklar gidýär.</p>
+					<p>    Medal halkajyk arkaly, ini 25 mm, beýikligi 15 mm iki gapdaly kertikli, beýikligi 13 mm deň ýaşyl reňkli syrça bilen örtülen gönüburçluk görnüşli kolodka birleşdirilýär. Ýaşyl reňkli syrça örtülen kolodkada döwlet dilinde güberçeklenip altyn çaýylan «TÜRKMENISTAN» diýen ýazgy ýerleşdirilendir.</p>
+					<p>    Medaly geýime dakmak üçin kolodkanyň arka tarapynda ildirgiji bar.</p>
+					<br><br>
+				</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-garasys-medal.png" alt="menu-item" data-content='
+					<div class="center-text">
+						<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+						<h3 class="center-text">«Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen Türkmenistanyň ýadygärlik medalyny döretmek hakynda</h3>
+						<br>
+						<img class="medal-img" src="../../assets/image/tur-gar-19.png" alt="example-image">
+						<br> <br>
+						<p>Türkmenistanyň Ýaragly Güýçleriniň harby gullukçylarynyň Türkmenistanyň döwlet Garaşsyzlygyny berkitmekde we gorap saklamakda, Watanymyzyň goranmak kuwwatyny pugtalandyrmakda, Watan goragçylaryny mertlikn we watansöýüjilik ruhunda terbiýelemekde bitiren hyzmatlaryny, şeýle hem Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe işjeň gatnaşan we ýörişiň ýokary derejede guramaçylykly geçirilmegine goşan şahsy goşantlaryny göz öňünde tutup, olary sylaglamak maksady bilen:</p>
+						<p>1-nji madda «Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medalyny döretmeli.</p>
+						<p>2-nji madda «Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly hakynda Düzgünnamany tassyklamaly (goşulýar).</p>
+						<p>3-nji madda «Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medalynyň we plankasynyň ýazgylaryny tassyklamaly (goşulýar).</p>
+						<br>
+						<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+						<p class="left-text"><strong>Gurbanguly Berdimuhamedow.</strong></p>
+						<br>
+						<p class="center-text">Aşgabat şäheri. 2010-njy ýylyň 30-njy awgusty.</p>
+						<br><br>
+						<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen Türkmenistanyň ýadygärlik medalynyň</strong></h3>
+						<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+						<br>
+						<p>1. «Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly Türkmenistanyň    Garaşsyzlygyny, çäk bitewiligini, konstitusion gurluşyny goramakda,     Watanymyzyň goranmak kuwwatyny berkitmekde we howpsuzlygyny üpjün etmekde tapawutlanan, şeýle hem Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe işjeň gatnaşan we ýörişiň ýokary derejede guramaçylykly geçirilmegine şahsy goşantlaryny goşan harby gullukçylary sylaglamak maksady bilen döredildi.</p>
+						<p>2. «Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly bilen Türkmenistanyň Ýaragly Güýçleriniň harby gullukçylarynyň Türkmenistanyň   döwlet Garaşsyzlygyny berkitmekde we gorap saklamakda, Watanymyzyň goranmak kuwwatyny pugtalandyrmakda, Watan goragçylaryny mertlik we     watansöýüjilik ruhunda terbiýelemekde bitiren hyzmatlaryny, şeýle hem  Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşan we dabaraly harby ýörişi ýokary derejede guramaçylykly   geçirmäge goşant goşan Türkmenistanyň Ýaragly Güýçleriniň,      Türkmenistanyň Döwlet serhet gullugynyň, Türkmenistanyň Içeri işler   ministrliginiň, Türkmenistanyň Milli howpsuzlyk ministrliginiň, şeýle hem     beýleki hukuk goraýjy edaralarynyň harby gullukçylary we işgärleri sylaglanylýar. </p>
+						<p>3. «Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly bilen Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşan we dabaraly harby ýörişi ýokary derejede guramaçylykly  geçirmäge goşant goşan we işjeň gatnaşan hem-de:</p>
+						<p>– Türkmenistanyň Garaşsyzlygyny pugtalandyrmaga, döwletimiziň goranmak kuwwatyny ýokarlandyrmaga, Watanymyzyň hem-de onuň raýatlarynyň howpsuzlygyny we asudalygyny üpjün etmäge goşan şahsy goşantlary üçin;</p>
+						<p>– milli Ýaragly Güýçlerimiziň ýokary derejedäki söweşjeň taýýarlygyny üpjün etmekdäki, esgerleri çuňňur watançylyk ruhunda terbiýelemekdäki, goşunda ýokary düzgün-tertibi ýola goýmakdaky we doganlyk-dostlugy ösdürmekdäki bitiren hyzmatlary üçin sylaglanylýar.</p>
+						<p>4. «Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly bilen sylaglananlara medal we onuň şahadatnamasy gowşurylýar.</p>
+						<p>5. «Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen  dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly bilen sylaglananlar   Türkmenistanyň kanunçylygynda bellenilen tertipdäki ýeňilliklerden peýdalanýarlar.</p>
+						<p>6. «Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly döşüň çep tarapyndan dakylýar we «Türkmenistanyň Garaşsyzlygynyň 18 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medalyndan soň ýerleşdirilýär.</p>
+						<br>
+						<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medalynyň</strong></h3>
+						<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+						<br>
+						<p>«Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen ýadygärlik medaly sekizburçluk, gyrasy inçe gyzyl çaýylan güberçek görnüşinde bolup, merkezi bölegi ýaşyl reňkli emal bilen syrçalanandyr.</p>
+						<p>Medalyň diametri 35 mm bolan ýaşyl reňkli emal bilen syrçalanan merkezi böleginiň içinde sekiz sany uzynlygy 5 mm we on alty sany uzynlygy 3 mm güberçek görnüşindäki ýüzüne gyzyl çaýylan burçlar ýerleşdirilen.</p>
+						<p>Medalyň umumy diametri 40 mm.</p>
+						<p>Medalyň merkezi böleginde diametri 25 mm bolan gyzyl çaýylan, inine 3 mm ölçegdäki güberçek görnüşindäki tegelegiň içinde 33 sany güberçek düwmejikler ýerleşdirilendir. Medalyň merkezi bölegindäki tegelegiň içi ýaşyl reňkli syrça bilen örtülip, içinde gyzyl çaýylan güberçek görnüşindäki «Garaşsyz Türkmenistana XIX ýyl» diýen ýazgy, Garaşsyzlyk binasy hem-de zeýtun şahalarynyň biri şekillendirilendir.</p>
+						<p>Medal mis bilen nikeliň garyndysyndan ýasalýar. Medalyň halkajyk arkaly birikdirilen ini 25 mm, beýikligi 15 mm bolan iki kertikli içki ini 20 mm, beýikligi 13 mm bolan ýaşyl reňkli syrça bilen örtülen gönüburçluk görnüşli esasy meýdanynda sekizburçluk we bäş ýyldyzly ýarym aý şekillendirilen.</p>
+						<p>Kolodkanyň arka tarapynda ony geýime dakmak üçin ildirgiç bar.</p>
+						<p>Medalyň arka tarapy gyzyl çaýylan, «Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna ýadygärlik medaly» diýen ýazgy we bäş ýyldyzly ýarym aý güberçek görnüşinde şekillendirilen.</p>
+						<br>
+						<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen Türkmenistanyň ýadygärlik medalynyň plankasynyň</strong></h3>
+						<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+						<br>
+						<p>Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» diýen Türkmenistanyň ýadygärlik medalynyň plankasynyň düşegi ýaşyl reňkli ýüpek mata bolup, merkezinde sekizburçlugyň  içinde bäş ýyldyzly ýarym aý şekillendirilen.</p>
+						<p>Plankanyň daşky gyrasy sary we goňur reňk bilen örtülen.</p>
+						<br><br>
+					</div>'>
+			</div>
+		</div>
+
+
+		<div class="new-container3">
+			<div class="military-new-slide2" >
+				<img src="../../assets/image/ds-garasys-medal-20.png" alt="menu-item" data-content='
+					<div class="center-text">
+						<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+						<h3 class="center-text">«Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalyny döretmek hakynda
+						</h3>
+						<br>
+						<img class="medal-img" src="../../assets/image/tur-gar-19.png" alt="example-image">
+						<br> <br>
+						<p>Türkmenistanyň Ýaragly Güýçleriniň harby gullukçylarynyň Türkmenistanyň döwlet Garaşsyzlygyny berkitmekde we gorap saklamakda, Watanymyzyň goranmak kuwwatyny pugtalandyrmakda, Watan goragçylaryny mertlik we watansöýüjilik ruhunda terbiýelemekde bitiren hyzmatlaryny, şeýle hem Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe işjeň gatnaşan we ýörişiň ýokary derejede guramaçylykly geçirilmegine goşan şahsy goşantlaryny göz öňünde tutup, olary sylaglamak maksady bilen:</p>
+						<p>1-nji madda. «Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalyny döretmeli.</p>
+						<p>2-nji madda. «Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly hakynda Düzgünnamany tassyklamaly (goşulýar). </p>
+						<p>3-nji madda. «Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalynyň we onuň plankasynyň ýazgylaryny tassyklamaly (goşulýar).</p>
+						<p>4-nji madda. Türkmenistanyň Mejlisiniň 2009-njy ýylyň 2-nji oktýabrynda kabul eden «Türkmenistanyň döwlet sylaglary hakynda» Türkmenistanyň Kanunynyň (Türkmenistanyň Mejlisiniň Maglumatlary, 2009 ý., № 4, 68-nji madda) 11-nji maddasyna şu mazmunly bendi goşmaly:</p>
+						<p>«Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly.</p>
+						<br>
+						<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+						<p class="left-text"><strong>Gurbanguly Berdimuhamedow.</strong></p>
+						<br>
+						<p class="center-text">Aşgabat şäheri. 2011-nji ýylyň 21-nji maýy.</p>
+						<br><br>
+						<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalynyň</strong></h3>
+						<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+						<br>
+						<p>1. «Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly Türkmenistanyň Garaşsyzlygyny, çäk bitewiligini, konstitusion gurluşyny goramakda, Watanymyzyň goranmak kuwwatyny berkitmekde we howpsuzlygyny üpjün etmekde göreldeli gullugy bilen tapawutlanan, şeýle hem Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe işjeň gatnaşan we ýörişiň ýokary derejede guramaçylykly geçirilmegine şahsy goşantlaryny goşan harby gullukçylary we işgärleri sylaglamak maksady bilen döredildi.</p>
+						<p>2. «Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly bilen Türkmenistanyň döwlet Garaşsyzlygyny berkitmekde we gorap saklamakda, Watanymyzyň goranmak kuwwatyny pugtalandyrmakda, Watan goragçylaryny mertlik we watansöýüjilik ruhunda terbiýelemekde hyzmatlary üçin Türkmenistanyň Ýaragly Güýçleriniň harby gullukçylary, şeýle hem Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşan we dabaraly harby ýörişi ýokary derejede guramaçylykly geçirmäge goşant goşan Türkmenistanyň Goranmak ministrliginiň, Türkmenistanyň Içeri işler ministrliginiň, Türkmenistanyň Milli howpsuzlyk ministrliginiň, Türkmenistanyň Döwlet serhet gullugynyň, şeýle hem beýleki hukuk goraýjy we harby edaralarynyň harby gullukçylary we işgärleri sylaglanylýar.</p>
+						<p>3. «Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly bilen Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşan we dabaraly harby ýörişi ýokary derejede guramaçylykly geçirmäge goşant goşan we işjeň gatnaşan hem-de:</p>
+						<p>– Türkmenistanyň Garaşsyzlygyny pugtalandyrmaga, döwletimiziň goranmak kuwwatyny ýokarlandyrmaga, Watanymyzyň hem-de onuň raýatlarynyň howpsuzlygyny we asudalygyny üpjün etmäge şahsy goşant goşanlar;</p>
+						<p>– milli Ýaragly Güýçlerimiziň ýokary derejedäki söweşjeň taýýarlygyny üpjün etmekde, harby gullukçylary ýokary watançylyk ruhunda terbiýelemekde, goşunda ýokary düzgün-tertibi ýola goýmakda we dostlugy pugtalandyrmakda hyzmatlary bitirenler sylaglanylýar.</p>
+						<p>4. «Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly bilen sylaglananlara medal we onuň şahadatnamasy gowşurylýar.</p>
+						<p>5. «Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly bilen sylaglananlar Türkmenistanyň kanunçylygynda bellenilen tertipdäki ýeňilliklerden peýdalanýarlar.</p>
+						<p>6. «Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly döşüň çep tarapyndan dakylýar we «Türkmenistanyň Garaşsyzlygynyň 19 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly ýadygärlik medalyndan soň ýerleşýär.</p>
+						<br>
+						<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalynyň</strong></h3>
+						<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+						<br>
+						<p>«Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly güberçek görnüşinde ýerine ýetirilen on alty burçluk görnüşinde, biri-birine galtaşýan iki sany sekizburçlukdan ybarat bolup, olaryň esasy sekiz burçly böleginiň ýüzüne altyn çaýylan, burçlarynda güberçek görnüşindäki sekizburçluklar ýerleşdirilen, beýleki galtaşýan sekiz burçly bölegi romb görnüşinde bolup, onuň her biriniň merkezi bölegi ýaşyl reňkli syrça bilen örtülendir.</p>
+						<p>Medalyň umumy diametri 45 mm.</p>
+						<p>Medalyň merkezi böleginde diametri 33 mm bolan altyn çaýylan, inine 5 mm ölçegdäkiiki gyrasy güberçek görnüşli zynjyrjyklar bilen jäheklenen tegelegiň içinde 20 sany güberçek görnüşindäki sekizburçluklar ýerleşdirilen. Medalyň merkezi bölegindäki tegelegiň içi iki bölege bölünen, onuň bir bölegi ak reňkli syrça bilen örtülip, ýokarlygyna ýaýraýan günüň şöhlesi ýerleşdirilen, ikinji bölegi bolsa ýaşyl reňkli syrça örtülen. Medalyň merkezi bölegindäki tegelegiň içinde, ýagny sary reňkli syrça bilen örtülen esasy meýdanynda Türkmenistanyň kontur kartasy, ak reňkli syrça bilen örtülen böleginde altyn çaýylan güberçek görnüşindäki «XX» rim san belgisi, ikinji ýaşyl reňkli syrça bilen örtülen böleginde bolsa, güberçek şekilli altyn çaýylan Türkmenistanyň esasy bäş haly gölleri ýerleşdirilen. Tegelegiň merkezinde güberçek görnüşinde ýerine ýetirilen Garaşsyzlyk Binasynyň we altyn çaýylan, biri-biri bilen kesişip geçýän zeýtun şahalarynyň ikisiniň şekilleri ýerleşdirilendir. </p>
+						<p>Medalyň arka tarapynda, ýagny inine 0,1 mm güberçek tegelegiň daşynda güberçek görnüşindäki «Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly ýubileý medaly» diýen ýazgysy hem-de merkezi böleginde umumy diametri 20 mm tegelegiň içinde bolsa, güberçek görnüşindäki bäş ýyldyzly ýarym aýyň şekili bar.</p>
+						<p>Medal beýikligi 15 mm, ini 28 mm bolan iki gapdaly kertikli gönüburçluk görnüşindäki kolodka halka arkaly birleşdirilendir. Kolodkanyň ýaşyl reňkli syrça bilen örtülen ähli tarapa günüň şöhlesi ýaýraýan esasy böleginde altyn çaýylan, güberçek görnüşindäki sekizburçlugyň we bäş ýyldyzly ýarym aýyň şekilleri ýerleşdirilen. </p>
+						<p>Kolodkanyň arka tarapynda medaly geýime dakmak üçin ildirgiç bar.</p>
+						<br>
+						<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalynyň plankasynyň</strong></h3>
+						<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+						<br>
+						<p>«Türkmenistanyň Garaşsyzlygynyň 20 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalynyň plankasynyň düşegi ýaşyl reňkli ýüpek mata bolup, ähli tarapa günüň şöhlesi ýaýraýan esasy meýdanynda bäş ýyldyzly ýarym aý şekillendirilen sekizburçlyk ýerleşdirilen.</p>
+						<p>Plankanyň daşky gyrasy sary reňk bilen örtülen.</p>
+						<p>Medalyň plankasynyň esasy mis bilen nikeliň garyndysyndan ýasalyp, ölçegi beýikligine 10 mm we inine 24 mm.</p>
+						<br><br>
+					</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-oguzhan-order.png" alt="menu-item" data-content='
+					<div class="center-text">
+						<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+						<h3 class="center-text">Türkmenistanyň «Oguzhanyň Ýyldyzy» ordenini döretmek hakynda</h3>
+						<br>
+						<img class="medal-img" src="../../assets/image/oguzhan-medal.png" alt="example-image">
+						<br> <br>
+						<p>1-nji madda. Türkmenistanyň «Oguzhanyň Ýyldyzy» ordenini döretmeli.</p>
+						<p>2-nji madda. Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeniniň Statusyny we Ýazgysyny tassyklamaly (goşulýar).</p>
+						<br>
+						<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+						<p class="left-text"><strong>Gurbanguly Berdimuhamedow.</strong></p>
+						<br>
+						<p class="center-text">Aşgabat şäheri. 2014-nji ýylyň 8-nji fewraly.</p>
+						<br><br>
+						<h3 class="center-text"><strong>Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeniniň</strong></h3>
+						<h3 class="center-text"><strong>STATUSY</strong></h3>
+						<br>
+						<p>1. Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeni Türkmenistanyň döwlet sylagydyr.</p>
+						<p>2. Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeni bilen:</p>
+						<p>döwletiň harby howpsuzlygyny üpjün etmekde, goranmak ukybyny pugtalandyrmakda bitiren aýratyn görnükli hyzmatlary üçin;</p>
+						<p>tabynlygyndaky harby bölümleriň harby gullukçylarynyň harby borjy göreldeli berjaý etmegini, olaryň harby gulluk borçlaryny birkemsiz ýerine ýetirmegini we söweşjeň taýýarlykda ýokary görkezijileri gazanmagyny üpjün eden harby bölümlere göreldeli ýolbaşçylyk etmekde bitiren aýratyn hyzmatlary we harby gullukda ýokary şahsy görkezijileri üçin; </p>
+						<p>harby ylmy we tehnikany ösdürmekde, Türkmenistanyň Ýaragly Güýçleri üçin işgärleri taýýarlamakda, uly möçberli harby okuw operasiýalaryny işläp düzmekde, harby tälimleri üstünlikli geçirmekde we goşunlaryň ýokary söweşjeň taýýarlygyny saklamakda bitiren uly hyzmatlary üçin;</p>
+						<p>Watany goramakda görkezen aýratyn edermenligi, bu işe goşan düýpli şahsy goşandy, Türkmenistanyň Döwlet serhediniň eldegrilmesizligini üpjün etmekde, hukuk tertibini öz jany üçin töwekgellik bilen goramakda görkezen aýratyn batyrlygy we edermenligi üçin;</p>
+						<p>parahatçylykly döwürde ýörite tabşyryklary göreldeli ýerine ýetirmekde görkezen edermenligi, aýratyn gaýduwsyzlygy we mertligi üçin sylaglanylýar.</p>
+						<p>3. Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeni bilen Türkmenistanyň Ýaragly Güýçleriniň, beýleki goşunlarynyň we harby edaralarynyň uly we ýokary ofiserler düzüminden bolan we beýleki harby gullukçylar sylaglanýar.</p>
+						<p>4. Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeni bilen sylaglanylan raýatlara Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeni we şahadatnama gowşurylýar.</p>
+						<p>5. Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeni bilen sylaglanan raýatlara ortaça aýlyk zähmet hakynyň otuz essesi möçberinde birwagtlaýyn baýrak we iş hakyna, aýlyk wezipe hakyna, pensiýasyna, kömek puluna, talyp we diňleýji hakyna ortaça aýlyk zähmet hakynyň 30 göterimi möçberinde her aýda goşmaça hak tölenilýär.</p>
+						<p>Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeni bilen sylaglanan raýatlar Türkmenistanyň kanunçylygynda bellenilen halatlarda we tertipde ýeňilliklerden peýdalanýarlar.</p>
+						<p>6. Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeni döşüň çep tarapyndan Türkmenistanyň «Türkmenbaşy» ordeniniň öň ýanyndan dakylýar.</p>
+						<p>7. Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeni bilen merhum bolan raýatlar hem sylaglanyp bilner.</p>
+						<br><br>
+						<h3 class="center-text"><strong>Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeniniň</strong></h3>
+						<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+						<br>
+						<p>Türkmenistanyň «Oguzhanyň Ýyldyzy» ordeni altyn çaýylan 925 mähekli kümüşden ýasalyp, gymmat bahaly daşlar bilen bezelen üç sany üsti-üstüne birleşdirilen  sekizburçlukdan ybaratdyr.</p>
+						<p>Ýerligi ýaşyl reňkli syrçalanan diametri 44 mm bolan ilkinji sekizburçlugyň daşky jähegi altyn çaýylan we burçlary diametri 35,5 mm bolan ýokarky sekizburçlugyň burçlary bilen altyn çaýylan güberçek çyzyklar arkaly gabatlaşdyrylan.</p>
+						<p>Diametri 50 mm bolan ortaky sekizburçlugyň burçlary görnüp, olar altyn çaýylan güberçek görnüşde ýasalan we onuň her burçunda togalak düwme goýlan.</p>
+						<p>Ýerligi gyzyl reňkli syrçalanan ýokarky sekizburçlukda daşky diametri 26 mm bolan iki tegelek ýerleşdirilen. Sekizburçlugyň her burçunda üç sany göwher daşy ýerleşdirilen. Daşky tegelek halka ak reňkli syrça bilen örtülip, onuň ýokarky böleginde «OGUZHANYŇ ÝYLDYZY» diýen altyn çaýylan ýazgy, aşaky böleginde bolsa deň aralykda ýerleşdirilen alty sany göwher daşlarynyň aralarynda türkmen halysynyň bäş sany altyn çaýylan gölleri şekillendirilen. </p>
+						<p>Diametri 18,5 mm bolan içki tegelegiň ortasy oýulyp, onda çar tarapa şöhle saçýan Günüň şöhleleri şekillendirilen we olar türkmen bedewiniň üstünde eli bilen yşarat edýän Oguzhanyň keşbini şöhlelendirýär. Tegelegiň aşaky böleginde üç sany altyn çaýylan kiçi sekizburçluk ýerleşdirilen.</p>
+						<p>Orden halkajyk arkaly beýikligi 15 mm, ini 30,5 mm bolan açyk kitap görnüşinde şekillendirilen daşy altyn çaýylan bezeg bilen jäheklenen ýaşyl reňkli syrçaly kolodka birleşdirilýär. Kolodkanyň ortasynda gyzyl reňkli syrçalanan sütünde türkmen halysynyň bäş sany altyn çaýylan gölleri ýerleşdirilendir.</p>
+					</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-edermen-medal.png" alt="menu-item" data-content='
+				<div class="center-text">
+					<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+					<h3 class="center-text">Türkmenistanyň «Türkmen edermen» medalyny döretmek hakynda</h3>
+					<br>
+					<img class="medal-img" src="../../assets/image/edermen-medal.png" alt="example-image">
+					<br> <br>
+					<p>1-nji madda. Türkmenistanyň «Türkmen edermen» medalyny döretmeli.</p>
+					<p>2-nji madda. Türkmenistanyň «Türkmen edermen» medalynyň Düzgünnamasyny tassyklamaly (goşulýar).</p>
+					<p>3-nji madda. Türkmenistanyň «Türkmen edermen» medalynyň Ýazgysyny we plankasynyň Ýazgysyny tassyklamaly (goşulýar).</p>
+					<br>
+					<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+					<p class="left-text"><strong>Gurbanguly Berdimuhamedow.</strong></p>
+					<br>
+					<p class="center-text">Aşgabat şäheri. 2019-njy ýylyň 30-njy noýabry.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Türkmen edermen» medalynyň</strong></h3>
+					<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+					<br>
+					<p>1. Türkmenistanyň «Türkmen edermen» medaly Türkmenistanyň döwlet sylagydyr.</p>
+					<p>2. Türkmenistanyň «Türkmen edermen» medaly Garaşsyz, hemişelik Bitarap Türkmenistanyň döwlet garaşsyzlygyny, özygtyýarlylygyny, çäk bitewüligini, konstitusion gurluşyny goramakda, kanunylygy we hukuk tertibini üpjün etmekde, aýratyn möhüm hem-de çylşyrymly wezipeleri ýerine ýetirmekde şahsy edermenlik görkezendikleri, şeýle hem öz jany üçin howply şertlerde gulluk borjuny berjaý etmekde bitiren aýratyn hyzmatlary üçin harby gullukçylary we hukuk goraýjy edaralaryň işgärlerini sylaglamak maksady bilen döredildi.</p>
+					<p>3. Türkmenistanyň «Türkmen edermen» medaly bilen Garaşsyz, hemişelik Bitarap Türkmenistanyň döwlet garaşsyzlygyny, özygtyýarlylygyny, çäk bitewüligini, konstitusion gurluşyny goramakda; kanunylygy we hukuk tertibini üpjün etmekde; aýratyn möhüm hem-de çylşyrymly wezipeleri ýerine ýetirmekde, öz jany üçin howply şertlerde gulluk borjuny berjaý etmekde aýratyn hyzmatlary bitiren, şahsy edermenlik görkezen, Türkmenistanyň Goranmak ministrliginiň, Türkmenistanyň Milli howpsuzlyk ministrliginiň, Türkmenistanyň Içeri işler ministrliginiň, Türkmenistanyň Döwlet serhet gullugynyň, Türkmenistanyň Prezidentiniň Howpsuzlyk gullugynyň harby gullukçylary we Türkmenistanyň kanunçylygyna laýyklykda harby gulluk göz öňünde tutulan ministrlikleriň we pudaklaýyn dolandyryş edaralarynyň harby gullukçylary hem-de hukuk goraýjy edaralaryň işgärleri sylaglanylýar.</p>
+					<p>4. Türkmenistanyň «Türkmen edermen» medaly bilen şu Düzgünnamanyň üçünji böleginde görkezilen hyzmatlary ýerine ýetirip, ölen (wepat bolan) harby gullukçylar we hukuk goraýjy edaralaryň işgärleri sylaglanyp bilner.</p>
+					<p>5. Türkmenistanyň «Türkmen edermen» medaly bilen sylaglamak Türkmenistanyň Goranmak ministriniň, Türkmenistanyň Milli howpsuzlyk ministriniň, Türkmenistanyň Içeri işler ministriniň, Türkmenistanyň Döwlet serhet gullugynyň başlygynyň, Türkmenistanyň Prezidentiniň Howpsuzlyk gullugynyň başlygynyň we Türkmenistanyň kanunçylygyna laýyklykda harby gulluk göz öňünde tutulan ministrlikleriň we pudaklaýyn dolandyryş edaralarynyň hem-de hukuk goraýjy edaralaryň ýolbaşçylarynyň teklipnamasy esasynda Türkmenistanyň Prezidenti, Türkmenistanyň Ýaragly Güýçleriniň Belent Serkerdebaşysy tarapyndan amala aşyrylýar.</p>
+					<p>6. Türkmenistanyň «Türkmen edermen» medaly bilen sylaglanan adamlara:</p>
+					<p>Türkmenistanyň «Türkmen edermen» medaly we onuň şahadatnamasy gowşurylýar; iň pes zähmet hakynyň üç essesi möçberinde birwagtlaýyn baýrak tölenilýär.</p>
+					<p>Türkmenistanyň «Türkmen edermen» medaly bilen sylaglanan adamlar Türkmenistanyň kanunçylygynda bellenilen halatlarda we tertipde ýeňilliklerden peýdalanýarlar.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Türkmen edermen» medalynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>Türkmenistanyň «Türkmen edermen» medaly gymmat bahaly daşlar bilen bezelen, umumy diametri 45 mm bolan tegelek görnüşindedir. Medalyň daş-töwereginden geçýän ini 2 mm bolan düşegi sary reňk bilen syrçalanan tegelek halkasy her biriniň diametri 1 mm bolan ak reňkli 111 sany sirkoniý daşlary bilen jäheklenen.</p>
+					<p>Medalyň daşky tegeleginiň içinde ini 3 mm bolan düşegi ýaşyl reňk bilen syrçalanan tegelek halkanyň iki gapdal tarapynda her biriniň uzynlygy 29,5 mm bolan altyn çaýylan ýaýyň ikisi ýerleşdirilen. Daşky halkanyň ýokarky we aşaky böleklerinde her biriniň diametri 3 mm bolan on sany altyn çaýylan sekizburçly ýyldyzlar ýerleşdirilen. Sekizburçly ýyldyzlaryň içinde her biriniň diametri 1,5 mm bolan ýaşyl reňkli sirkoniý daşlary ýerleşdirilen.</p>
+					<p>Medalyň merkezi böleginde ini 1,50 mm, diametri 34 mm bolan altyn çaýylan alaja şekilli tegelek ýerleşdirilen. Ýaýlaryň we alaja şekilli tegelegiň arasynda Gün şöhleleri we ýaýyň oklarynyň simwoliki görnüşleri şekillendirilen. Tegelegiň arka tarapynda iki sany altyn çaýylan atanaklaýyn geçirilen gylyçlaryň saplarynyň şekili ýerleşdirilen.</p>
+					<p>Medalyň içki tegeleginde ini 4 mm bolan sary çyzyk bilen halkalanan, diametri 22,5 mm bolan ýene-de bir tegelek ýerleşdirilen. Düşegi ýaşyl reňk bilen syrçalanan bu halkanyň içinde harplaryň beýikligi 2 mm bolan «TÜRKMEN EDERMEN» diýen altyn çaýylan ýazgy we diametri 3 mm bolan altyn çaýylan üç sany sekizburçly ýyldyzlar ýerleşdirilen, sekizburçly ýyldyzlaryň içinde her biriniň diametri 1,5 mm bolan ýaşyl reňkli sirkoniý daşlary ýerleşdirilen. Halkanyň aşaky böleginde sekizburçly ýyldyzdan iki gapdala ýaýrap gidýän, uzynlygy 11 mm deň Türkmenistanyň Bitaraplygynyň nyşany bolan zeýtun şahalarynyň şekili ýerleşdirilen.</p>
+					<p>Medalyň merkezi böleginde güberçek görnüşde diametri 20 mm bolan kümüşsöw reňkli sekizburçluk ýerleşdirilip, sekizburçlugyň düşegi altyn bilen çaýylýar, onuň merkezinde beýikligi 12 mm bolan, altynsow we kümüşsöw reňkli, boýnuna türkmen milli alajasy dakylan türkmen alabaý itiniň kellesiniň şekili ýerleşdirilen.</p>
+					<p>Medalyň arka tarapynyň merkezinde daşky tegelek bilen 2,5 mm aralykda diametri 40 mm bolan güberçek görnüşinde tegelek ýerleşdirilen. Tegelegiň merkezi böleginde aýlaw görnüşinde oýulyp şekillendirilen, harplaryň beýikligi 2,5 mm bolan «TÜRKMEN EDERMEN» diýen ýazgy we her biriniň diametri 3 mm bolan üç sany sekizburçly ýyldyzlar ýerleşdirilen. Medalyň arka tarapynyň aşaky böleginde oýulyp şekillendirilen, sekizburçly ýyldyzdan iki gapdala ýaýrap gidýän, uzynlygy 11 mm deň Türkmenistanyň Bitaraplygynyň nyşany bolan zeýtun şahalarynyň şekilleri ýerleşdirilen.</p>
+					<p>Medal altyn çaýylan halkajyk arkaly ini 34 mm, beýikligi 15 mm bolan iki gapdaly kertikli, daş-töweregi altyn çaýylyp jäheklenen we ýaşyl reňk bilen syrçalanan kolodka birleşdirilýär. Kolodkanyň merkezinde umumy diametri 9 mm bolan, güberçek görnüşli, altyn çaýylan alaja şekili we her biriniň diametri 1 mm bolan ak reňkli 16 sany sirkoniý daşlary bilen jäheklenen galkan we onuň arka tarapynda iki sany altyn çaýylan atanaklaýyn geçirilen gylyçlaryň saplarynyň şekili ýerleşdirilen, gylyçlaryň uçlary galkanyň daşyna çykyp dur. Galkanyň merkezi böleginde bäş ýyldyzly, diametri 3,5 mm bolan ýarymaý we iki gapdala ýaýrap gidýän Türkmenistanyň Bitaraplygynyň nyşany bolan zeýtun şahalarynyň şekili ýerleşdirilen.</p>
+					<p>Türkmenistanyň «Türkmen edermen» medaly we onuň kolodkasy 925 mähekli altyn çaýylan kümüşden ýasalan.</p>
+					<p>Medaly geýime dakmak üçin kolodkanyň arka tarapynda ildirgiji bar.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Türkmen edermen» medalynyň plankasynyň</strong></h3>
+					<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+					<br>
+					<p>Türkmenistanyň «Türkmen edermen» medalynyň plankasy ýaşyl reňk bilen syrçalanan. Onuň merkezinde güberçek görnüşinde diametri 6,5 mm deň bolan galkan ýerleşdirilen. Galkanyň daş-töweregi altyn çaýylan alaja şekili we ak reňkli 16 sany sirkoniý daşlary bilen jäheklenen. Galkanyň arka tarapynda iki sany atanaklaýyn geçirilen gylyçlaryň saplarynyň şekilleri ýerleşdirilen. Galkanyň merkezi böleginde bäş ýyldyzly ýarymaýyň we iki gapdala ýaýrap gidýän Türkmenistanyň Bitaraplygynyň nyşany bolan zeýtun şahalarynyň şekilleri ýerleşdirilen.</p>
+					<p>Medalyň plankasynyň ölçegi ini 24 mm we beýikligi 10 mm bolup, ol mis bilen nikeliň garyndysyndan ýasalan.</p>
+					<br><br>
+				</div>'>
+			</div>
+			<!-- поставить медаль М.Бердымухамедова первой -->
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-gorakcesy-ady.png" alt="menu-item" data-content='
+				<div class="center-text">
+					<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+					<h3 class="center-text">Türkmenistanyň «Türkmenistanyň Watan goragçysy» diýen hormatly adyny döretmek hakynda</h3>
+					<br>
+					<img class="medal-img" src="../../assets/image/rutk-watan.png" alt="example-image">
+					<br> <br>
+					<p>1-nji madda. Türkmenistanyň «Türkmenistanyň Watan goragçysy» diýen hormatly adyny döretmeli.</p>
+					<p>2-nji madda. Türkmenistanyň «Türkmenistanyň Watan goragçysy» diýen hormatly adynyň Düzgünnamasyny we onuň döşe dakylýan nyşanynyň Ýazgysyny tassyklamaly (goşulýar). </p>
+					<p>3-nji mad da. Şu Kanun resmi taýdan çap edilen gününden herekete girizilýär.</p>
+					<br>
+					<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+					<p class="left-text"><strong>Gurbanguly Berdimuhamedow.</strong></p>
+					<br>
+					<p class="center-text">Aşgabat şäheri. 2021-nji ýylyň 16-njy ýanwary.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Türkmenistanyň Watan goragçysy» diýen hormatly adynyň</strong></h3>
+					<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+					<br>
+					<p>1. Türkmenistanyň «Türkmenistanyň Watan goragçysy» diýen hormatly ady Türkmenistanyň döwlet sylagydyr.</p>
+					<p>2. Harby we hukuk goraýjy edaralaryň hatarynda azyndan on bäş ýylyň dowamynda birkemsiz gulluk eden hem-de Garaşsyz, hemişelik Bitarap Türkmenistanyň Döwlet garaşsyzlygyny, özygtyýarlylygyny, çäk bitewüligini, konstitusion gurluşyny goramakda, kanunylygy we hukuk tertibini üpjün etmekde uly hyzmatlary bitiren Türkmenistanyň Döwlet howpsuzlyk geňeşiniň agzalaryna Türkmenistanyň «Türkmenistanyň Watan goragçysy» diýen hormatly ady dakylýar.</p>
+					<p> 3. Türkmenistanyň «Türkmenistanyň Watan goragçysy» diýen hormatly ady Türkmenistanyň Prezidentiniň, Türkmenistanyň Ýaragly Güýçleriniň Belent Serkerdebaşysynyň Permany bilen dakylýar. </p>
+					<p>4. Türkmenistanyň «Türkmenistanyň Watan goragçysy» diýen hormatly adynyň dakylmagy Türkmenistanyň Ministrler Kabinetiniň Başlygynyň orunbasary, Türkmenistanyň Döwlet howpsuzlyk geňeşiniň sekretarynyň teklipnamasy esasynda amala aşyrylýar. </p>
+					<p>Teklipnamalar Türkmenistanyň Prezidentiniň adyna iberilýär.</p>
+					<p>5. Türkmenistanyň «Türkmenistanyň Watan goragçysy» diýen hormatly ady dakylanlara «Türkmenistanyň Watan goragçysy» diýen hormatly adynyň şahadatnamasy we döşe dakylýan nyşany Türkmenistanyň Prezidenti, Türkmenistanyň Ýaragly Güýçleriniň Belent Serkerdebaşysy tarapyndan gowşurylýar. </p>
+					<p>6. Türkmenistanyň «Türkmenistanyň Watan goragçysy» diýen hormatly adynyň döşe dakylýan nyşany lybasyň sag tarapyna
+					dakylýar.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Türkmenistanyň Watan goragçysy» diýen hormatly adynyň döşe dakylýan nyşanynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>Türkmenistanyň «Türkmenistanyň Watan goragçysy» diýen hormatly adynyň döşe dakylýan nyşany dikligine süýrümtil sekizburçluk görnüşinde bolup, mis bilen sinkiň garyndysyndan ýasalyp, onuň ýüzüne misiň okislenen ergini çaýylýar. </p>
+					<p>Döşe dakylýan nyşanyň beýikligi 48 mm, ini 30 mm bolup, onuň ýüzi altynsow syrça bilen örtülendir.</p>
+					<p>Döşe dakylýan nyşanyň ýerligi altynsow reňkli çyzyklaryň içinden ýaýrap gidýän şöhleler bilen şekillendirilen. Döşe dakylýan nyşanyň ýüz tarapynyň merkezinde Türkmenistanyň Döwlet tugrasynyň şekili bolup, onuň daşyndan aýlanan halkanyň ýokarky böleginde «TÜRKMENISTANYŇ», aşaky böleginde «WATAN GORAGÇYSY» diýen altynsow reňkli ýazgy ýerleşdirilen. Türkmenistanyň Döwlet tugrasy bilen halkanyň arasy ýaşyl reňk bilen örtülen. Onuň aşagynda iki tarapa ýaýrap gidýän altyn reňkli zeýtun pudagynyň şekili ýerleşdirilen.</p>
+					<p>Döşe dakylýan nyşanyň daş gyrasy altynsow reňk bilen jäheklenen.</p>
+					<p>Döşe dakylýan nyşan güberçek görnüşindedir.</p>
+					<p>Döşe dakylýan nyşanyň arka tarapynda ony lybasa dakmak üçin nurbat bardyr.</p>
+					<br><br>
+				</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-ubiley-medal.png" alt="menu-item" data-content='
+				<div class="center-text">
+					<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+					<h3 class="center-text">«Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalyny döretmek hakynda</h3>
+					<br>
+					<img class="medal-img" src="../../assets/image/tur-gar-25.png" alt="example-image">
+					<br> <br>
+					<p>1-nji madda. «Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalyny döretmeli.</p>
+					<p>2-nji madda. «Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly hakynda Düzgünnamany tassyklamaly (goşulýar).</p>
+					<p>3-nji madda. «Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalynyň we onuň plankasynyň ýazgylaryny tassyklamaly (goşulýar).</p>
+					<br>
+					<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+					<p class="left-text"><strong>Gurbanguly Berdimuhamedow.</strong></p>
+					<br>
+					<p class="center-text">Aşgabat şäheri. 2016-njy ýylyň 26-njy marty.</p>
+					<br>
+					<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalynyň</strong></h3>
+					<h3 class="center-text"><strong>STATUSY</strong></h3>
+					<br>
+					<p>1. «Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly Türkmenistanyň Garaşsyzlygyny, çäk bitewiligini, konstitusion gurluşyny goramakda, Watanymyzyň goranmak kuwwatyny berkitmekde we howpsuzlygyny üpjün etmekde göreldeli gullugy bilen tapawutlanan, şeýle hem Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe işjeň gatnaşan we ýörişiň ýokary derejede guramaçylykly geçirilmegine şahsy goşantlaryny goşan harby gullukçylary we işgärleri sylaglamak maksady bilen döredildi.</p>
+					<p>2. «Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly bilen Türkmenistanyň döwlet Garaşsyzlygyny berkitmekde we gorap saklamakda, Watanymyzyň goranmak kuwwatyny pugtalandyrmakda, Watan goragçylaryny mertlik we watansöýüjilik ruhunda terbiýelemekde hyzmatlary üçin Türkmenistanyň Ýaragly Güýçleriniň harby gullukçylary, şeýle hem Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşan we dabaraly harby ýörişi ýokary derejede guramaçylykly geçirmäge goşant goşan Türkmenistanyň Goranmak ministrliginiň, Türkmenistanyň Içeri işler ministrliginiň, Türkmenistanyň Milli howpsuzlyk ministrliginiň, Türkmenistanyň Döwlet serhet gullugynyň, şeýle hem beýleki hukuk goraýjy we harby edaralarynyň harby gullukçylary we işgärleri sylaglanylýar.</p>
+					<p>3. «Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly bilen Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşan we dabaraly harby ýörişi ýokary derejede guramaçylykly geçirmäge goşant goşan we işjeň gatnaşan hem-de:</p>
+					<p>– Türkmenistanyň Garaşsyzlygyny pugtalandyrmaga, döwletimiziň goranmak kuwwatyny ýokarlandyrmaga, Watanymyzyň hem-de onuň raýatlarynyň howpsuzlygyny we asudalygyny üpjün etmäge şahsy goşant goşanlar;</p>
+					<p>– milli Ýaragly Güýçlerimiziň ýokary derejedäki söweşjeň taýýarlygyny üpjün etmekde, harby gullukçylary ýokary watançylyk ruhunda terbiýelemekde, goşunda ýokary düzgün-tertibi ýola goýmakda we dostlugy pugtalandyrmakda hyzmatlary bitirenler sylaglanylýar.</p>
+					<p>4. «Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly bilen sylaglananlara medal we onuň şahadatnamasy gowşurylýar.</p>
+					<p>5. «Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly döşüň çep tarapyndan dakylýar we Türkmenistanyň «Garaşsyz, Baky Bitarap Türkmenistan» ýubileý medalyndan soň ýerleşdirilýär.</p>
+					<br>
+					<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalynyň</strong></h3>
+					<h3 class="center-text"><strong>STATUSY</strong></h3>
+					<br>
+					<p>«Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly güberçek görnüşinde ýerine ýetirilen sekizburçlukdan ybarat. Sekizburçly ýyldyzyň burçlarynyň her birinde ýaşyl reňkli syrçalanan nagyş şekillendirilen. Onuň merkezinde umumy diametri 32 mm bolan tegelekleriň ikisi ýerleşdirilen, diametri 22 mm bolan oýulyp şekillendirilen ýerligi altyn çaýylan içki tegelekde Türkmenistanyň ýaşyl reňkli syrçalanan kartasy, merkezinde güberçek görnüşde altyn çaýylan Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyny aňladýan rim sanlary bilen «XXV» diýen ýazgy şekillendirilen. Içki tegelegiň daşynda ýerligi ak syrça bilen örtülen, ini 5 mm bolan halkanyň ýokarky böleginde «GARAŞSYZ, BAKY BITARAP TÜRKMENISTAN» diýen altyn çaýylan ýazgy, aşaky böleginde bolsa, zeýtun agajynyň biri-biri bilen kesişýän şahalarynyň ikisiniň şekilleri ýerleşdirilen. Ýazgy bilen zeýtun şahalarynyň arasynda sekizburçly ýyldyz ýerleşdirilen.</p>
+					<p>Ýubileý medalynyň arka tarapynyň merkezi böleginde umumy diametri 20 mm tegelegiň içinde güberçek görnüşindäki bäş ýyldyzly ýarym aýyň şekili şekillendirilip, tegelegiň töweregi boýunça geçýän, ini 1 mm tegelegiň daşynda bolsa, güberçek görnüşindäki «Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medaly» diýen ýazgy ýerleşdirilen.</p>
+					<p>Ýubileý medalynyň umumy diametri 44 mm.</p>
+					<p>Ýubileý medaly halkajyk arkaly ini 28 mm, beýikligi 15 mm bolan iki gapdaly kertikli, gönüburçluk görnüşindäki kolodka birleşdirilýär. Kolodkanyň esasy meýdanynda güberçek görnüşinde aýtyn çaýylan sekizburçluk ýerleşdirilen. Sekizburçlugyň üstünde iki sany gylyç atanaklaýyn we olaryň üstünde bolsa tegelek görnüşinde galkan ýerleşdirilen. Galkanyň merkezi böleginde zeýtun agajynyň iki sany şahalary daşyna aýlanan sekizburçluk ýerleşdirilip, sekizburçlugyň merkezi böleginde bolsa, bäş ýyldyzly ýarym aý şekillendirilen.</p>
+					<p>Ýubileý medaly we onuň kolodkasy misiň we nikeliň garyndysyndan ýasalyp, ýüzüne altyn çaýylýar.</p>
+					<p>Kolodkanyň arka tarapynda medaly geýime dakmak üçin ildirgiç bar.</p>
+					<br>
+					<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalynyň plankasynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>«Türkmenistanyň Garaşsyzlygynyň 25 ýyllygyna bagyşlanyp geçirilen dabaraly harby ýörişe gatnaşyja» atly Türkmenistanyň ýubileý medalynyň plankasynyň düşegi ýaşyl reňkli syrça bilen örtülen. Onuň esasy meýdanynda güberçek görnüşinde altyn çaýylan sekizburçluk ýerleşdirilen. Sekizburçlugyň üstünde iki sany gylyç atanaklaýyn we olaryň üstünde bolsa tegelek görnüşinde galkan ýerleşdirilen. Galkanyň merkezi böleginde zeýtun agajynyň iki sany şahalary daşyna aýlanan sekizburçluk ýerleşdirilip, sekizburçlugyň merkezi böleginde bolsa, bäş ýyldyzly ýarym aý şekillendirilen.</p>
+					<p>Plankanyň daşky gyrasyna altyn çaýylýar.</p>
+					<p>Ýubileý medalynyň plankasynyň ölçegi inine 24 mm we beýikligine 10 mm bolup, ol mis bilen nikeliň garyndysyndan ýasalýar.</p>
+					<br><br>
+				</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-malikguli-medal.png" alt="menu-item" data-content='
+				<div class="center-text">
+					<h2 class="center-text">TÜRKMENISTANYŇ MEJLISINIŇ KARARY</h2>
+					<h3 class="center-text">Türkmenistanyň «Mälikguly Berdimuhamedow» medalyny döretmek hakynda</h3>
+					<br>
+					<img class="medal-img" src="../../assets/image/malik-medal.png" alt="example-image">
+					<br> <br>
+					<p>Türkmenistanyň içeri işler edaralarynda köp ýyllaryň dowamynda çeken döredijilikli, halal, päk ýürekli we nusgalyk zähmeti, göreldeli gullugy, asylly ahlak sypatlary bilen watansöýüjiligiň, halka, Watana hyzmat etmegiň belent nusgasyny görkezen, jemgyýetde uly abraýa mynasyp bolan, ýurdumyzyň goranmak ukybyny berkitmekde, jemgyýetçilik tertibini goramakda we jenaýatçylyga garşy göreşmekde gulluk borçlaryny birkemsiz ýerine ýetirip, gullukda aýratyn tapawutlanan, ykrar edilen ajaýyp döredijilik üstünlikleri, ýokary ussatlygy, hünär ezberligi we beýleki häsiýetleri bilen içeri işler edaralarynyň işgärlerine görelde mekdebi bolan içeri işler edaralarynyň hormatly weterany Mälikguly Berdimuhamedowyň geçen göreldeli zähmet we gulluk ýoluna mynasyp baha bermek maksady bilen, şeýle hem ýurdumyzyň içeri işler edaralarynyň we hormatly weteranlarynyň köpsanly haýyşlaryny nazara alyp, Türkmenistanyň Konstitusiýasynyň 81-nji maddasynyň 9-njy bendine laýyklykda, Türkmenistanyň Mejlisi  karar  edýär:</p>
+					<p>1. Türkmenistanyň «Mälikguly Berdimuhamedow» medalyny döretmeli.</p>
+					<p>2. Türkmenistanyň «Mälikguly Berdimuhamedow» medalynyň Düzgünnamasyny we Ýazgysyny tassyklamaly (goşulýar).</p>
+					<br>
+					<p class="left-text"><strong>Türkmenistanyň Mejlisiniň Başlygy</strong></p>
+					<p class="left-text"><strong>A.NURBERDIÝEWA</strong></p>
+					<br>
+					<p class="center-text">Aşgabat şäheri, 2017-nji ýylyň 26-njy awgusty.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Mälikguly Berdimuhamedow» medalynyň</strong></h3>
+					<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+					<br>
+					<p>1. Türkmenistanyň «Mälikguly Berdimuhamedow» medaly Türkmenistanyň döwlet sylagy bolup, ol Watanymyzyň goranmak ukybyny berkitmekde, jemgyýetçilik tertibini goramakda we jenaýatçylyga garşy göreşmekde gulluk borçlaryny birkemsiz ýerine ýetirip, gullukda aýratyn tapawutlanan adamlary sylaglamak maksady bilen döredildi.</p>
+					<p>2. Türkmenistanyň «Mälikguly Berdimuhamedow» medaly bilen:</p>
+					<p>Türkmenistanyň Prezidentiniň döwletiň goranmak ukybyny pugtalandyrmak, howpsuzlygy üpjün etmek, jemgyýetçilik tertibini gorap saklamak we jenaýatçylyga garşy göreşmek baradaky syýasatyny durmuşa geçirmekde bitiren aýratyn görnükli hyzmatlary üçin;</p>
+					<p>harby we hukuk goraýjy edaralaryň gullukçylarynyň gulluk borçlaryny göreldeli, birkemsiz ýerine ýetirenligi we söweşjeň taýýarlykda ýokary görkezijileri gazananlygy üçin, bitiren aýratyn hyzmatlary we ýokary şahsy görkezijileri üçin; </p>
+					<p>ýurdy goramakda görkezen aýratyn edermenligi, goşan uly şahsy goşandy, jany üçin töwekgellik etmek bilen hukuk tertibini goramakda görkezen aýratyn batyrlygy we edermenligi üçin;</p>
+					<p>ýörite tabşyryklary göreldeli ýerine ýetirmekde görkezen aýratyn gaýduwsyzlygy we mertligi üçin harby we hukuk goraýjy edaralaryň ýolbaşçylary, gullukçylary, beýleki işgärleri hem-de weteranlary sylaglanylýar.</p>
+					<p>3. Türkmenistanyň «Mälikguly Berdimuhamedow» medaly bilen Türkmenistanyň Prezidenti tarapyndan Watanymyzyň goranmak ukybyny berkitmekde, jemgyýetçilik tertibini goramakda, şeýle hem jenaýatçylyga garşy göreşmekde Türkmenistanyň öňünde uly hyzmatlary bitiren we aýratyn tapawutlanan adamlar hem sylaglanyp bilner.</p>
+					<p>4. Türkmenistanyň «Mälikguly Berdimuhamedow» medaly bilen sylaglanylan adamlara Türkmenistanyň «Mälikguly Berdimuhamedow» medaly we onuň şahadatnamasy gowşurylýar.</p>
+					<p>5. Türkmenistanyň «Mälikguly Berdimuhamedow» medaly bilen sylaglanan adamlara ortaça aýlyk zähmet hakynyň bäş essesi möçberinde birwagtlaýyn baýrak tölenýär we olar Türkmenistanyň kanunçylygynda bellenilen halatlarda we tertipde ýeňilliklerden peýdalanýarlar.</p>
+					<br>
+					<h3 class="center-text"><strong>Türkmenistanyň «Mälikguly Berdimuhamedow» medalynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<p>Türkmenistanyň «Mälikguly Berdimuhamedow» medaly gymmat bahaly daşlar bilen bezelen sekizburçly ýyldyz görnüşindedir.</p>
+					<p>Medalyň umumy diametri 46 mm bolan sekizburçlugyň içinde diametri 38 mm bolan, daş-töweregi 96 sany ak reňkli sirkoniý daşlary bilen jäheklenen ikinji sekizburçluk ýerleşdirilen. Içki sekizburçlugyň her burçunda bolsa gün şöhlesi şekillendirilip, burçlarynyň her birisi ýaşyl reňkli bir sany zümerret daşy bilen bezelen.</p>
+					<p>Medalyň merkezi böleginde umumy diametri 30 mm bolan  tegelekleriň ikisi ýerleşdirilen, diametri 22 mm bolan içki tegelegiň ýerliginde altyn çaýylan Gün şöhleleri şekillendirilen we Türkmenistanyň içeri işler edaralarynda köp ýyllaryň dowamynda göreldeli gulluk eden, içeri işler edaralarynyň hormatly weterany Mälikguly Berdimuhamedowyň 750 mähekli altyndan ýerine ýetirilen güberçek görnüşli barelýef şekili ýerleşdirilen.</p>
+					<p>Medalyň içki tegeleginiň daşynda ini 4 mm bolan ýaşyl reňk bilen syrçalanan tegelek halkanyň ýokarky böleginde «MÄLIKGULY BERDIMUHAMEDOW» diýen altyn çaýylan ýazgy, aşaky böleginde bolsa, parahatçylygyň nyşany bolan iki tarapa ýaýrap gidýän altyn çaýylan zeýtun şahalary ýerleşdirilen.</p>
+					<p>Medal halkajyk arkaly ini 27 mm, beýikligi 16 mm bolan daş-töweregi altyn çaýylyp jäheklenen ýaşyl reňkli mata bilen örtülen kolodka birikdirilýär. Kolodkanyň merkezinde altyn çaýylan ini 11 mm, beýikligi 12 mm bolan galkan we onuň arkasynda ýerleşdirilen 2 sany gylyç şekillendirilen, gylyçlaryň eltutarlarynyň şekilleriniň arasynda bolsa, Türkmenistanyň Döwlet baýdagynyň şekili ýerleşdirilen.</p>
+					<p>Medalyň arka tarapynyň aşaky böleginde aýlaw görnüşde «WATANA BOLAN SÖÝGI IŇ BEÝIK SÖÝGÜDIR!» diýen ýazgy, onuň ýokarysynda bolsa, umumy beýikligi 17 mm bolan şekil, ýagny iki tarapa ýaýrap gidýän zeýtun şahalarynyň arasynda galkan we onuň arkasynda ýerleşdirilen 2 sany gylyç şekillendirilen, gylyçlaryň eltutarlarynyň şekilleriniň arasynda Türkmenistanyň Döwlet baýdagynyň şekili ýerleşdirilen.</p>
+					<p>Medalyň kolodkasynyň arkasynda medaly geýime dakmak üçin uzynlygy 18 mm bolan ildirgiç bar.</p>
+					<p>Türkmenistanyň «Mälikguly Berdimuhamedow» medaly we onuň kolodkasy 925 mähekli kümüşden altyn çaýylyp ýasalýar.</p>
+					<br><br>
+				</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-ybiley-medal-25.png" alt="menu-item" data-content='
+				<div class="center-text">
+					<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+					<h3 class="center-text">«Türkmenistanyň Bitaraplygynyň 25 ýyllygyna» atly Türkmenistanyň ýubileý medalyny döretmek hakynda</h3>
+					<br>
+					<img class="medal-img" src="../../assets/image/turk-bitar.png" alt="example-image">
+					<br> <br>
+					<p>1-nji madda. Türkmenistanyň hemişelik Bitaraplyk hukuk ýagdaýyna eýe bolmagynyň 25 ýyllygy mynasybetli, Garaşsyzlyk ýyllary içinde hemişelik Bitarap döwletimiziň durmuşynyň syýasy, ykdysady, medeni ugurlarynda ajaýyp zähmet üstünliklerini gazanan adamlary sylaglamak maksady bilen, «Türkmenistanyň Bitaraplygynyň 25 ýyllygyna» atly Türkmenistanyň ýubileý medalyny döretmeli.</p>
+					<p>2-nji madda. «Türkmenistanyň Bitaraplygynyň 25 ýyllygyna» atly Türkmenistanyň ýubileý medaly hakynda Düzgünnamany tassyklamaly (goşulýar).</p>
+					<p>3-nji madda. «Türkmenistanyň Bitaraplygynyň 25 ýyllygyna» atly Türkmenistanyň ýubileý medalynyň Ýazgysyny tassyklamaly (goşulýar).</p>
+					<br>
+					<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+					<p class="left-text"><strong>Gurbanguly Berdimuhamedow.</strong></p>
+					<br>
+					<p class="center-text">Aşgabat şäheri. 2020-nji ýylyň 14-nji marty.</p>
+					<br>
+					<h3 class="center-text"><strong>«Türkmenistanyň Bitaraplygynyň 25 ýyllygyna» atly Türkmenistanyň ýubileý medaly hakynda</strong></h3>
+					<h3 class="center-text"><strong>DÜZGÜNNAMASY</strong></h3>
+					<br>
+					<p>1. «Türkmenistanyň Bitaraplygynyň 25 ýyllygyna» atly Türkmenistanyň ýubileý medaly döwlet Garaşsyzlygynyň ýyllary içinde Türkmenistanyň Garaşsyzlygyny we hemişelik Bitaraplyk hukuk ýagdaýyny pugtalandyrmak ugrunda ýurdumyzyň syýasy, durmuş-ykdysady, ruhy-medeni we beýleki ugurlardaky ösüşine halal zähmeti bilen uly goşant goşan adamlary sylaglamak üçin döredilýär.</p>
+					<p>2. «Türkmenistanyň Bitaraplygynyň 25 ýyllygyna» atly Türkmenistanyň ýubileý medaly bilen:</p>
+					<p>Türkmenistanyň döwlet Garaşsyzlygyny we hemişelik Bitaraplyk hukuk ýagdaýyny pugtalandyrmak ugrunda köp ýyllaryň dowamynda çeken halal zähmeti, işjeň we önjeýli döwlet we jemgyýetçilik işi, şeýle hem hemişelik bitaraplyk ýörelgelerine laýyklykda ata Watanymyzyň halkara derejesindäki abraýyny berkitmekde goşan uly şahsy goşandy üçin;</p>
+					<p>Garaşsyz, hemişelik Bitarap Türkmenistanyň ykdysady kuwwatyny pugtalandyrmak, ylmyny, bilimini, medeniýetini we sungatyny, saglygy goraýşyny hem-de ýurduň durmuşynyň beýleki ähli ugurlaryny ösdürmek boýunça işlenip taýýarlanan maksatnamalary durmuşa geçirmekde gazanan ajaýyp üstünlikleri we ýokary hyzmatlary üçin;</p>
+					<p>Garaşsyz, hemişelik Bitarap Türkmenistanyň goranmak ukybyny berkitmäge, raýatlaryň howpsuzlygyny, kanunylygy we hukuk tertibini üpjün etmek işine goşan uly şahsy goşandy üçin;</p>
+					<p>Ösüp gelýän ýaş nesli ata Watanymyza bolan söýgi we wepalylyk, mertlik, halallyk, ýokary ruhubelentlik sypatlarynda terbiýelemek işinde görkezen hyzmatlary üçin sylaglanylýar.</p>
+					<p>3. «Türkmenistanyň Bitaraplygynyň 25 ýyllygyna» atly Türkmenistanyň ýubileý medaly bilen Türkmenistanyň raýatlary sylaglanylýar.</p>
+					<p>«Türkmenistanyň Bitaraplygynyň 25 ýyllygyna» atly Türkmenistanyň ýubileý medaly bilen Türkmenistanyň Prezidenti tarapyndan daşary ýurt raýatlary hem sylaglanyp bilner.</p>
+					<p>4. Şu sylaga mynasyp bolan adamlara «Türkmenistanyň Bitaraplygynyň 25 ýyllygyna» atly Türkmenistanyň ýubileý medaly we onuň şahadatnamasy gowşurylýar.</p>
+					<br>
+					<h3 class="center-text"><strong>«Türkmenistanyň Bitaraplygynyň 25 ýyllygyna» atly Türkmenistanyň ýubileý medalynyň</strong></h3>
+					<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+					<br>
+					<p>«Türkmenistanyň Bitaraplygynyň 25 ýyllygyna» atly Türkmenistanyň ýubileý medaly sekizburçluk görnüşinde ýasalan. Sekizburçlugyň burçlarynyň her birinde açyk ýaşyl reňkli milli nagyş şekillendirilen.</p>
+					<p>Sekizburçlugyň merkezinde umumy diametri 30.34 mm bolan tegelekleriň ikisi ýerleşdirilen, diametri 22.62 mm bolan içki tegelekde Birleşen Milletler Guramasynyň nyşany şekillendirilen. Nyşanyň üstünde boýy 18.34 mm, ini 10.82 mm bolan Türkmenistanyň Bitaraplyk binasy, onuň sag tarapynda boýy 7.87 mm, ini 6.83 mm bolan Türkmenistanyň parlap duran baýdagynyň şekili, çep tarapynda bolsa boýy 3.02 mm, ini 8.86 mm bolan Türkmenistanyň hemişelik Bitaraplygynyň 25 ýyllygyny aňladýan rim san bilen «XXV» diýen ýazgy şekillendirilen.</p>
+					<p>Ýubileý medalynyň içki tegeleginiň daşynda ýerligi ak reňk bilen syrçalanan tegelek halkanyň içinde harplaryň ölçegi 1.40 mm bolan «GARAŞSYZ, BAKY BITARAP TÜRKMENISTAN!» diýen altyn çaýylan ýazgy ýerleşdirilen. Tegelek halkanyň içindäki sekizburçlugyň we ýüzlenme belgisiniň beýikligi - 1.85 mm.</p>
+					<p>Ýubileý medalynyň umumy diametri - 72.68 mm.</p>
+					<p>Ýubileý medaly halkajyklar arkaly ini 30.82 mm we beýikligi 20.22 mm bolan baýdak görnüşdäki kolodka birleşdirilýär. Ýaşyl reňkli syrça örtülen kolodkada türkmen milli gölleri, iki sany zeýtun pudagy we bäş ýyldyzly ýarym Aý şekillendirilen</p>
+					<p>Ýubileý medalynyň arka ýüzündäki tegelek şekiliň diametri - 31.06 mm, iňňebagjygyň uzynlygy - 25.61 mm.</p>
+					<p>Ýubileý medaly 925 mähekli kümüşden ýasalyp, onuň ýüzüne altyn çaýylýar.</p>
+					<br><br>
+				</div>'>
+			</div>
+			<div class="military-new-slide2">
+				<img src="../../assets/image/ds-watan-medal.png" alt="menu-item" data-content='
+					<div class="center-text">
+						<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+						<h3 class="center-text">«Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medalyny döretmek hakynda</h3>
+						<br>
+						<img class="medal-img" src="../../assets/image/rutk-watan.png" alt="example-image">
+						<br> <br>
+						<p>1-nji madda. «Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medalyny döretmeli.</p>
+						<p>2-nji madda. «Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medaly hakynda Düzgünnamany tassyklamaly (goşulýar).</p>
+						<p>3-nji madda. «Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medalynyň Ýazgysyny we onuň plankasynyň Ýazgysyny tassyklamaly (goşulýar).</p>
+						<br>
+						<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+						<p class="left-text"><strong>Gurbanguly Berdimuhamedow.</strong></p>
+						<br>
+						<p class="center-text">Aşgabat şäheri, 2021-nji ýylyň 5-nji maýy.</p>
+						<br>
+						<h3 class="center-text"><strong>«Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň  ýubileý medaly hakynda </strong></h3>
+						<h3 class="center-text"><strong>DÜZGÜNNAMA</strong></h3>
+						<br>
+						<p>1. «Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medaly Türkmenistanyň Garaşsyzlygyny, öz ygtyýarlylygyny, çäk bitewüligini, konstitusion gurluşyny goramakda, kanunylygy we hukuk tertibini üpjün etmekde, Watanymyzyň goranmak kuwwatyny berkitmekde we howpsuzlygyny üpjün etmekde göreldeli gullugy bilen tapawutlanan, şeýle hem Türkmenistanyň Garaşsyzlygynyň ýubileý ýyllaryna bagyşlanyp geçirilýän dabaraly harby ýörişlere işjeň gatnaşan ýa-da ýörişiň ýokary derejede guramaçylykly geçirilmegine şahsy goşantlaryny goşan harby gullukçylary we işgärleri sylaglamak maksady bilen döredilýär.</p>
+						<p>2. «Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medaly bilen Türkmenistanyň döwlet Garaşsyzlygyny berkitmekde we gorap saklamakda, Watanymyzyň goranmak kuwwatyny pugtalandyrmakda, Watan goragçylaryny mertlik we watansöýüjilik ruhunda terbiýelemekde bitiren hyzmatlary, şeýle hem Türkmenistanyň Garaşsyzlygynyň ýubileý ýyllaryna bagyşlanyp geçirilýän dabaraly harby ýörişlere gatnaşan ýa-da dabaraly harby ýörişi ýokary derejede guramaçylykly geçirmäge goşan goşantlary üçin Türkmenistanyň harby we hukuk goraýjy edaralarynyň harby gullukçylary we işgärleri sylaglanylýar.</p>
+						<p>3. «Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medaly bilen Türkmenistanyň Garaşsyzlygynyň ýubileý ýyllaryna bagyşlanyp geçirilýän dabaraly harby ýörişlere gatnaşan ýa-da dabaraly harby ýörişi ýokary derejede guramaçylykly geçirmäge goşant goşan we işjeň gatnaşan hem-de:</p>
+						<p>1) Türkmenistanyň Garaşsyzlygyny pugtalandyrmaga, kanunylygy we hukuk tertibini üpjün etmäge, döwletimiziň goranmak kuwwatyny ýokarlandyrmaga, Watanymyzyň hem-de onuň raýatlarynyň howpsuzlygyny we asudalygyny üpjün etmäge şahsy goşant goşanlar;</p>
+						<p>2) milli Ýaragly Güýçlerimiziň ýokary derejedäki söweşjeň taýýarlygyny üpjün etmekde, harby gullukçylary ýokary watançylyk ruhunda terbiýelemekde, goşunda ýokary düzgün-tertibi ýola goýmakda we dostlugy pugtalandyrmakda hyzmatlary bitirenler;</p>
+						<p>3) harby ylmy we tehnikany ösdürmekde, harby we hukuk goraýjy edaralary üçin hünärmenleri taýýarlamakda, uly möçberli harby okuw tälimleri taýýarlamakda we üstünlikli geçirmekde, goşunlaryň ýokary söweşjeň taýýarlygyny saklamakda uly hyzmatlary bitirenler;</p>
+						<p>4) harby borjuny göreldeli ýerine ýetirip, harby gullukda ýokary hünär derejesini görkezip, düzgün-nyzamy birkemsiz berjaý edenler sylaglanylýar.</p>
+						<p>4. «Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medaly bilen sylaglamak Türkmenistanyň döwlet Garaşsyzlygynyň ýubileýleri bellenilýän ýyllarda amala aşyrylýar.</p>
+						<p>5. «Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medaly bilen sylaglananlara medal we onuň şahadatnamasy gowşurylýar.</p>
+						<br>
+						<h3 class="center-text"><strong>«Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medalynyň </strong></h3>
+						<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+						<br>
+						<p>«Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medaly güberçek görnüşinde ýerine ýetirilen sekizburçlukdan ybaratdyr. Ýubileý medalynyň umumy diametri 44.75 mm.</p>
+						<p>Sekizburçly ýyldyzyň burçlarynyň her biriniň arasynda nagyşlaryň üstüne çykyp duran kiçijik sekizburçly ýyldyzyň altyn çaýylan üç sany burçy ýerleşdirilen. Sekizburçly ýyldyzyň burçlarynyň her biriniň daşky burçy ýaşyl reňk bilen syrçalanyp, onuň içki bölegine altyn we kümüş çaýylan. Medalyň merkezinde tegelekleriň ikisi ýerleşdirilen, oýulyp şekillendirilen ýerligi kümüş çaýylan içki tegelek ýer şarynyň şekilinde bolup, onuň sag we çep tarapynda altyn çaýylan gylyjyň şekili we ortasynda diametri 14.26 mm bolan altyn çaýylan galkanyň şekili bolup, onuň merkezinde altyn çaýylan gün şöhleleri, üstünde galkanyň we iki sany gylyjyň şekilleri ýerleşdirilen. Içki tegelegiň daş ýüzündäki ýaşyl reňk bilen syrçalanan halkanyň ýokarky böleginde «GARAŞSYZ TÜRKMENISTANYŇ WATAN GORAGÇYSY» diýen altyn çaýylan ýazgy we halkanyň aşaky böleginde bolsa iki tarapa ýaýrap gidýän altyn çaýylan zeýtun pudagy hem-de ýazgy bilen zeýtun pudagynyň arasynda iki sany kiçijik altyn çaýylan sekizburçly ýyldyz bar. Daşky tegelegiň daş töweregi bolsa kümüş çaýylan we ýaşyl reňk bilen syrçalanan dürli şekiller bilen nagyşlanan.</p>
+						<p>Ýubileý medalynyň arka tarapynyň merkezi böleginde umumy diametri 30 mm bolan tegelegiň ýokarky böleginde ini 1.5 mm bolan «GARAŞSYZ TÜRKMENISTANYŇ WATAN GORAGÇYSY» diýen ýazgy we tegelegiň aşaky böleginde bolsa iki tarapa ýaýrap gidýän zeýtun pudagy hem-de ýazgy bilen zeýtun pudagynyň arasynda iki sany kiçijik sekizburçly ýyldyz bar.</p>
+						<p>Ýubileý medaly halkajyk arkaly ini 25.2 mm, beýikligi 13.5 mm bolan iki gapdaly kertikli, gönüburçluk görnüşindäki kolodka birleşdirilýär. Kolodkanyň esasy meýdanynda güberçek görnüşinde altyn çaýylan galkan ýerleşdirilen. Galkanyň aşagynda iki sany gylyç atanaklaýyn ýerleşdirilen. Galkanyň merkezi böleginde iki sany zeýtun pudagy daşyna aýlanan sekizburçluk ýerleşdirilip, sekizburçlugyň merkezi böleginde bolsa, bäş ýyldyzly ýarym Aý şekillendirilen.</p>
+						<p>Ýubileý medaly we onuň kolodkasy misiň we nikeliň garyndysyndan ýasalyp, ýüzüne altyn çaýylýar.</p>
+						<p>Kolodkanyň arka tarapynda medaly geýime dakmak üçin ildirgiç bar.</p>
+						<br>
+						<h3 class="center-text"><strong>«Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medalynyň plankasynyň </strong></h3>
+						<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+						<br>
+						<p>«Garaşsyz Türkmenistanyň Watan goragçysy» atly Türkmenistanyň ýubileý medalynyň plankasynyň düşegi ýaşyl reňkli syrça bilen örtülen. Onuň esasy meýdanynda güberçek görnüşinde altyn çaýylan galkan ýerleşdirilen. Galkanyň sag we çep tarapynda altyn çaýylan gylyjyň şekili ýerleşdirilen. Galkanyň merkezi böleginde bäş ýyldyzly ýarym Aý şekillendirilen.</p>
+						<p>Plankanyň daşky gyrasyna altyn çaýylýar.</p>
+						<p>Ýubileý medalynyň plankasynyň ölçegi inine 22 mm we beýikligine 10 mm bolup, ol mis bilen nikeliň garyndysyndan ýasalýar.</p>
+						<br>
+						<p>Çeşme: Esger gazeti. 2021.10.06.</p>
+						<br><br>
+					</div>'>
+			</div>
+			<div class="military-new-slide2 middle-slide2">
+				<img src="../../assets/image/ds-30-medal.png" alt="menu-item" data-content='
+				<div class="center-text">
+						<h2 class="center-text">TÜRKMENISTANYŇ KANUNY</h2>
+						<h3 class="center-text">«Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyna» atly Türkmenistanyň ýubileý medalyny döretmek hakynda</h3>
+						<br>
+						<img class="medal-img" src="../../assets/image/garassyz.png" alt="example-image">
+						<br> <br>
+						<p>Türkmenistanyň Garaşsyzlygynyň şanly 30 ýyllygy mynasybetli, Garaşsyzlyk ýyllary içinde ýurdumyzyň durmuşynyň syýasy, ykdysady, medeni ugurlarynda ýokary zähmet üstünliklerini gazanan adamlary sylaglamak maksady bilen:</p>
+						<p>1-nji madda. «Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyna» atly Türkmenistanyň ýubileý medalyny döretmeli.</p>
+						<p>2-nji madda. «Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyna» atly Türkmenistanyň ýubileý medaly hakynda Düzgünnamany tassyklamaly (goşulýar).</p>
+						<p>3-nji madda. «Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyna» atly Türkmenistanyň ýubileý medalynyň Ýazgysyny tassyklamaly (goşulýar).</p>
+						<br>
+						<p class="left-text"><strong>Türkmenistanyň Prezidenti</strong></p>
+						<p class="left-text"><strong>Gurbanguly Berdimuhamedow.</strong></p>
+						<br>
+						<p class="center-text">Aşgabat şäheri, 2021-nji ýylyň 5-nji iýuny.</p>
+						<br>
+						<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyna» atly Türkmenistanyň ýubileý medaly hakynda</strong></h3>
+						<h3 class="center-text"><strong>DÜZGÜNNAMA</strong></h3>
+						<br>
+						<p>1. «Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyna» atly Türkmenistanyň ýubileý medaly Türkmenistanyň döwlet Garaşsyzlygy ýyllarynda ýurdumyzy we jemgyýeti durnukly ösdürmek ugrunda çeken halal zähmeti bilen uly hyzmatlary bitiren adamlary sylaglamak üçin döredilýär.</p>
+						<p>2. «Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyna» atly Türkmenistanyň ýubileý medaly bilen:</p>
+						<p>– Türkmenistanyň döwlet Garaşsyzlygyny we özygtyýarlylygyny berkitmek ugrunda köp ýyllaryň dowamynda çeken halal zähmeti, işjeň we önjeýli döwlet, jemgyýetçilik işi, şeýle hem ata Watanymyzyň halkara giňişlikdäki abraýyny pugtalandyrmaga goşan uly şahsy goşandy üçin;</p>
+						<p>– Garaşsyz, hemişelik Bitarap Türkmenistanyň ykdysady kuwwatyny pugtalandyrmak, ylmyny, bilimini, medeniýetini, sungatyny, saglygy goraýşyny, şeýle hem ýurduň durmuşynyň beýleki pudaklaryny ösdürmek boýunça kabul edilen maksatnamalary durmuşa geçirmekde bitiren uly hyzmatlary üçin;</p>
+						<p>– Garaşsyz Türkmenistanyň goranmak ukybyny berkitmäge, raýatlaryň howpsuzlygyny, kanunylygy we hukuk tertibini üpjün etmek işine goşan uly şahsy goşandy üçin;</p>
+						<p>– ösüp gelýän ýaş nesli Watana bolan söýgi we wepalylyk, mertlik, halallyk, ýokary ruhubelentlik sypatlarynda terbiýelemek işinde görkezen uly hyzmatlary üçin sylaglanylýar.</p>
+						<p>3. «Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyna» atly Türkmenistanyň ýubileý medaly bilen Türkmenistanyň raýatlary sylaglanylýar.</p>
+						<p>«Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyna» atly Türkmenistanyň ýubileý medaly bilen Türkmenistanyň Prezidenti tarapyndan Türkmenistanyň raýaty bolmadyk adamlar hem sylaglanyp bilner.</p>
+						<p>4. Şu sylaga mynasyp bolan adamlara «Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyna» atly Türkmenistanyň ýubileý medaly we onuň şahadatnamasy gowşurylýar.</p>
+						<br>
+						<h3 class="center-text"><strong>«Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyna» atly Türkmenistanyň ýubileý medalynyň</strong></h3>
+						<h3 class="center-text"><strong>ÝAZGYSY</strong></h3>
+						<br>
+						<p>«Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyna» atly Türkmenistanyň ýubileý medaly burçlarynyň aralygynda altyn çaýylan we ýaşyl reňk bilen syrçalanan dürli uzynlykdaky taýajyklar ýerleşdirilen sekizburçluk görnüşinde ýasalan. Sekizburçlugyň ýerligi ak reňk bilen syrçalanan her burçunda bir sany ak sirkoniý daşy ýerleşdirilen. Sekizburçlugyň umumy diametri 44 mm.</p>
+						<p>Sekizburçlugyň üstünde ýerleşdirilen, diametri 31 mm bolan tegelegiň iç ýüzüniň ýokarky böleginde «GARAŞSYZ TÜRKMENISTAN» diýen altyn çaýylan ýazgy, aşaky böleginde bolsa iki tarapa ýaýrap gidýän altyn çaýylan zeýtun pudaklarynyň şekili ýerleşdirilen. Tegelegiň ýer şary şekillendirilen merkezi böleginde ýaşyl reňk bilen syrçalanan Türkmenistanyň kartasy, Türkmenistanyň Garaşsyzlygynyň 30 ýyllygyny aňladýan rim san bilen «XXX» diýen ýazgy, arça agajynyň şekili bilen birleşdirilen Türkmenistanyň Döwlet baýdagy we Birleşen Milletler Guramasynyň baýdagy hem-de parahatçylygyň nyşany bolan ak kepderiniň ganatlaryny ýaýyp duran şekili ýerleşdirilen.</p>
+						<p>Ýubileý medaly halkajyk arkaly ini 30 mm we beýikligi 20 mm bolan baýdak görnüşdäki kolodka birleşdirilen. Ýaşyl reňk syrça örtülen kolodkada bäş sany türkmen haly gölleri, iki sany zeýtun pudagy we bäş ýyldyzly ýarym Aý şekillendirilen.</p>
+						<p>Ýubileý medalynyň arka tarapyndaky tegelegiň diametri 31mm. Eşige dakmak üçin kolodka birikdirilen iňňebagjygyň uzynlygy 25,6 mm.</p>
+						<p>Ýubileý medaly 925 mähekli kümüşden ýasalyp, onuň ýüzüne altyn çaýylan.</p>
+						<br><br>
+				</div>'>
+			</div>
+		</div>
+	</div>
+
+	<div id="overlay">
+		<div id="overlay-image-container">
+			<img id="overlay-image" src="" alt="overlay-image">
+		</div>
+		<div id="overlay-content">
+			<div class="scrolling-text2">
+				<div class="mr-b">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function () {
+			// Скроем оверлей при загрузке страницы
+			$('#overlay').hide();
+
+			// Показать оверлей при клике на изображение
+			$('.military-new-slide2 img').on('click', function () {
+				var imgSrc = $(this).attr('src');
+				var contentHtml = $(this).attr('data-content'); // Получаем HTML-контент из data-content
+
+				function showOverlay() {
+					// Обновляем содержимое
+					$('#overlay-image').attr('src', imgSrc);
+					$('#overlay-content').html(contentHtml);
+
+					// Используем небольшой тайм-аут, чтобы убедиться, что контент загружен
+					setTimeout(function () {
+						$('#overlay-content').scrollTop(0); // Сбрасываем позицию прокрутки на начало
+					}, 100); // Задержка 100 мс может быть уменьшена или увеличена при необходимости
+
+					// Плавно открываем оверлей с новым контентом
+					$('#overlay').fadeIn('slow', function () {
+						$('#overlay-content').addClass('show'); // Плавное появление контента
+					});
+				}
+
+				if ($('#overlay').is(':visible')) {
+					// Если оверлей уже открыт, сначала закрываем его
+					$('#overlay-content').removeClass('show'); // Убираем класс, чтобы скрыть контент
+					$('#overlay').fadeOut('slow', function () {
+						showOverlay(); // Обновляем и показываем новый контент после закрытия предыдущего
+					});
+				} else {
+					// Если оверлей закрыт, просто открываем его с новым контентом
+					showOverlay();
+				}
+			});
+
+			// Скрыть оверлей при клике на него
+			$('#overlay').on('click', function () {
+				$('#overlay-content').removeClass('show'); // Убираем класс перед скрытием
+				$('#overlay').fadeOut('slow');
+			});
+		});
+
+
+
+
+
+	</script>
+
+</body>
+
+</html>

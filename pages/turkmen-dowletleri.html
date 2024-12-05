@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../js/jquery.min.js" type="application/javascript"></script>
+    <script src="../js/slick.min.js" type="application/javascript"></script>
+    <script src="../js/custom.js" type="application/javascript"></script>
+    <title>Türkmen döwletleri</title>
+    <style>
+        .image-title{
+            width: 30%;
+            height: 50px;
+            margin: -20px auto 50px;
+        }
+
+        .td-item{
+            height: 120px !important;
+            width: 20%;
+            margin: 0 auto -20px;
+        }
+
+        .td-item img{
+            width: 100%;
+            object-fit: cover;
+            height: 80px;
+        }
+
+        .td-container{
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .bac-arrow{
+            left: 52%;
+        }
+    </style>
+</head>
+<body class="td">
+    <div class="main-container">
+        <video autoplay loop muted playsinline class="back-full-video">
+            <source src="../assets/video/td-fon.mp4" type="video/mp4">
+        </video>
+        <div  onclick="window.location.href='../index.html'" class="bac-arrow">
+            <img src="../assets/image/back.png" alt="back" >
+        </div>
+        <div class="over-container center-block">
+            <div class="with-title">
+                <div class="image-title">
+                    <img class="image-title" src="../assets/image/menu-td-gold-zaglaw.png" alt="menu-item">
+                </div>
+                <div class="td-container">
+                    <div  onclick="window.location.href='td/2 Turkmen dowletleri.html'" class="td-item">
+                        <img src="../assets/image/turkmen-dowletleri.png" alt="menu-item">
+                    </div>
+                    <div  onclick="window.location.href='td/1 Türkmenistanyň çäginde gurlan döwletler.html'" class="td-item">
+                        <img src="../assets/image/turkmenistanyn-caginde-gurlan-dowletler.png" alt="menu-item">
+                    </div>
+                    <div  onclick="window.location.href='td/3 Turkmen beglikleri.html'" class="td-item">
+                        <img src="../assets/image/turkmen-beglikleri.png" alt="menu-item">
+                    </div>
+                    <div  onclick="window.location.href='td/4 Türkmen atabeglikleri.html'" class="td-item">
+                        <img src="../assets/image/turkmen-atabeglikleri.png" alt="menu-item">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

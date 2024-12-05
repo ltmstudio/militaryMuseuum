@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style/swiper.css">
+    <script src="../js/swiper.js"></script>
+    <title>Türkmenistanyň ýaragly güýçler</title>
+</head>
+
+<body class="military">
+    <div class="main-container">
+        <video autoplay loop muted playsinline class="back-full-video">
+            <source src="../assets/video/guchler-fon.mp4" type="video/mp4">
+        </video>
+        <div onclick="window.location.href='../index.html'" class="bac-arrow">
+            <img src="../assets/image/back.png" alt="back">
+        </div>
+        <div class="over-container center-block">
+            <div class="swiper-container military-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="clickable-overlay" onclick="window.location.href='harby/turkmenistanyn-yaragly-guycleri.html'"></div>
+                        <div class="military-slide">
+                            <img src="../assets/image/TM Osnowanie IKO 1.png" alt="menu-item">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="clickable-overlay" onclick="window.location.href='harby/guryyer-goshunlary.html'">
+                        </div>
+                        <div class="military-slide">
+                            <img src="../assets/image/TM Osnowanie IKO 10.png" alt="menu-item">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="clickable-overlay" onclick="window.location.href='harby/harby-howa-guychleri.html'">
+                        </div>
+                        <div class="military-slide">
+                            <img src="../assets/image/TM Osnowanie IKO 12.png" alt="menu-item">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="clickable-overlay"
+                            onclick="window.location.href='harby/harby-deniz-guychleri.html'"></div>
+                        <div class="military-slide">
+                            <img src="../assets/image/TM Osnowanie IKO 11.png" alt="menu-item">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="clickable-overlay" onclick="window.location.href='harby/harby-kanunchylyk.html'">
+                        </div>
+                        <div class="military-slide">
+                            <img src="../assets/image/TM Osnowanie IKO 4.png" alt="menu-item">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="clickable-overlay" onclick="window.location.href='harby/kararlar.html'"></div>
+                        <div class="military-slide">
+                            <img src="../assets/image/TM Osnowanie IKO 6.png" alt="menu-item">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="clickable-overlay" onclick="window.location.href='harby/dowlet-sylaglary.html'">
+                        </div>
+                        <div class="military-slide">
+                            <img src="../assets/image/TM Osnowanie IKO 7.png" alt="menu-item">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="clickable-overlay" onclick="window.location.href='harby/harby-ylym-we-bilim.html'">
+                        </div>
+                        <div class="military-slide">
+                            <img src="../assets/image/TM Osnowanie IKO 5.png" alt="menu-item">
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var swiper = new Swiper('.military-slider', {
+            direction: 'vertical',
+            slidesPerView: 3, 
+            spaceBetween: 10,
+            mousewheel: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+    </script>
+</body>
+
+</html>
+<style>
+    .military-slide-container {
+        position: relative;
+    }
+
+    .clickable-overlay {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 80px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .military-slide img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .swiper-container {
+  
+        height: 80vh;
+      
+        overflow: hidden;
+   
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+
+        margin: 0;
+   
+        padding: 0;
+      
+    }
+
+    .swiper-slide-active .military-slide img {
+        opacity: 1;
+    }
+
+
+    .bac-arrow {
+        left: 61%;
+    }
+</style>
